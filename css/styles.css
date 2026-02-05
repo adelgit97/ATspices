@@ -59,14 +59,14 @@ body {
 }
 
 /* RTL adjustments */
-html[dir="rtl"] .link-pill {
+/* html[dir="rtl"] .link-pill {
   flex-direction: row-reverse;
 }
 
 html[dir="rtl"] .link-pill i {
   margin-left: 0.5rem;
   margin-right: 0;
-}
+} */
 
 /* Mobile */
 @media (max-width: 576px) {
@@ -75,3 +75,4 @@ html[dir="rtl"] .link-pill i {
     height: 120px;
   }
 }
+

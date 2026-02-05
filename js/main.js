@@ -1,12 +1,12 @@
 const PHONE = "201036578338";
-const EMAIL = "info@atspices.com";
+const EMAIL = "at.spicesstore@gmail.com";
 
 
 const translations = {
   ar: {
     title: "A.T. Spices",
     description:
-      "بهارات، أعشاب، والمزيد.<br>١٠ ب شارع مهدى عارفه مشروع ال ١٤ عمارة الحي العاشر مدينةً نصر",
+      "بهارات، أعشاب، والمزيد.<br>١٠ ب شارع مهدي عرفه ،مشروع ال ١٤ عمارة الحي العاشر - مدينة نصر",
     location: "موقع المتجر",
     whatsapp: "واتساب 01036578338",
     instagram: "إنستجرام",
