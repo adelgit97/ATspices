@@ -1,0 +1,77 @@
+:root {
+  --main-color: #69462F;
+  --secondary-color: #BE9A7B;
+  --light-color: #E6CCB2;
+  --white-color: #fff;
+}
+
+/* Base */
+body {
+  background-color: var(--light-color);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: var(--main-color);
+}
+
+/* Avatar */
+.avatar {
+  width: 180px;
+  height: 180px;
+}
+
+/* Link Pills */
+.link-pill {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 20px;
+  background-color: var(--white-color);
+  color: var(--main-color);
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 999px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.link-pill:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* Language Toggle */
+.language-toggle {
+  position: fixed;
+  top: 16px;
+  left: 16px;
+  z-index: 1000;
+}
+
+.langbtn {
+  border-color: var(--main-color);
+  color: var(--main-color);
+  display: inline-flex;
+  align-items: center;
+}
+
+.langbtn:hover {
+  background-color: var(--main-color);
+  color: var(--light-color);
+}
+
+/* RTL adjustments */
+html[dir="rtl"] .link-pill {
+  flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .link-pill i {
+  margin-left: 0.5rem;
+  margin-right: 0;
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .avatar {
+    width: 120px;
+    height: 120px;
+  }
+}
