@@ -16,6 +16,7 @@ const translations = {
     whatsappText: "مرحباً، أود الاستفسار عن المنتجات",
     emailSubject: "استفسار عن المنتجات",
     emailBody: "مرحباً، أود الاستفسار عن المنتجات.",
+    shareClick:"شارك"
   },
   en: {
     title: "A.T. Spices",
@@ -30,6 +31,7 @@ const translations = {
     whatsappText: "Hello, I would like to ask about your products",
     emailSubject: "Product Inquiry",
     emailBody: "Hello, I would like to ask about your products.",
+    shareClick:"Share"
   },
 };
 
@@ -74,4 +76,28 @@ applyLanguage(initialLang);
 toggleBtn.addEventListener("click", () => {
   const newLang = document.documentElement.lang === "ar" ? "en" : "ar";
   applyLanguage(newLang);
+});
+
+const shareToggle = document.getElementById("shareToggle");
+
+shareToggle.addEventListener("click", async () => {
+  const shareData = {
+    title: "A.T. Spices | بهارات، أعشاب، مكسرات وعسل",
+    text: "Check out A.T. Spices – متجر بهارات، أعشاب، مكسرات وعسل في مدينة نصر والتجمع",
+    url: window.location.href
+  };
+
+  if (navigator.share) {
+    try {
+      await navigator.share(shareData);
+      //console.log("Page shared successfully");
+    } catch (err) {
+      //console.error("Share failed:", err);
+    }
+  } else {
+    // Fallback: copy URL to clipboard
+    navigator.clipboard.writeText(window.location.href)
+      .then(() => alert("الرابط تم نسخه / Link copied!"))
+      .catch(() => alert("يرجى نسخ الرابط يدوياً / Please copy the link manually"));
+  }
 });
