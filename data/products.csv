@@ -1,5 +1,5 @@
 ﻿id,name,name_eng,category,category_eng,description,description_eng,tag,tag_eng,image,active,featured_order,price_125,price_250,price_500,price_1000,price_shaker,price_unit,discount
-test-spice-01,اختبار-بهارات-01,Test-Spice-01,بهارات,Spices,وصف تجريبي لمنتج بهارات رقم 01.,Test description for spice product 01.,,,assets/ATlogo-round-ar-630.png,TRUE,1,40,75,140,260,55,,10
+test-spice-01,اختبار-بهارات-01,Test-Spice-01,بهارات,Spices,وصف تجريبي لمنتج بهارات رقم 01.,Test description for spice product 01.,,,assets/cardamom.jpg,TRUE,1,40,75,140,260,55,,10
 test-nuts-01,اختبار-مكسرات-01,Test-Nuts-01,مكسرات,Nuts,وصف تجريبي لمنتج مكسرات رقم 01.,Test description for nuts product 01.,,,assets/Atlogo-round-ar-1200-630-c.png,TRUE,2,70,130,240,450,,,0
 test-honey-01,اختبار-عسل-01,Test-Honey-01,عسل,Honey,وصف تجريبي لمنتج عسل رقم 01.,Test description for honey product 01.,,,,TRUE,3,,110,200,380,,,5
 test-incense-01,اختبار-بخور-01,Test-Incense-01,بخور,Incense,وصف تجريبي لمنتج بخور رقم 01.,Test description for incense product 01.,اختبار مميز,Test featured,assets/ATlogo-round-ar.png,TRUE,4,,,,,,90,0
