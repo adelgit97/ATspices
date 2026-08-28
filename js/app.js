@@ -5,7 +5,7 @@ class SiteHeader extends HTMLElement {
       <header class="site-header">
         <div class="header-inner header-shell">
           <a class="brand" href="#shopView" aria-label="A.T. Spices">
-            <img src="assets/ATlogo-round-ar-630.png" alt="" width="56" height="56">
+            <img src="assets/ATlogo-round-ar-630.png" alt="" width="70" height="70">
             <span class="brand-copy">
               <strong>A.T. Spices</strong>
               <small data-i18n="brandLine">نكهة تستحق المشاركة</small>

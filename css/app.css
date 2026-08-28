@@ -1209,8 +1209,8 @@ img {
   }
 
   .brand img {
-    width: 46px;
-    height: 46px;
+    width: 60px;
+    height: 60px;
   }
 
   .brand-copy small,
@@ -1750,8 +1750,8 @@ site-header {
   }
 
   .site-header .brand img {
-    width: 38px;
-    height: 38px;
+    width: 60px;
+    height: 60px;
   }
 
   .site-header .brand-copy {
