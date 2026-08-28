@@ -1,160 +1,245 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#69462f">
+  <meta name="description" content="A.T. Spices – متجر بهارات، أعشاب، مكسرات، عسل ومنتجات عناية في مدينة نصر والتجمع. High-quality spices, herbs, nuts, honey and personal care products in Cairo.">
+  <meta name="keywords" content="بهارات, أعشاب, مكسرات, عسل, عناية شخصية, زيوت شعر, مدينة نصر, التجمع, Madinet Nasr, New Cairo spices, herbs, nuts, honey, beauty, personal care, hair oils, Cairo">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://atspicesstore.com/">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/ATlogo-round-ar-630.png">
-
-  <title>A.T. Spices</title>
-
-   <!-- SEO -->
-<meta name="description" content="A.T. Spices – متجر بهارات، أعشاب، مكسرات وعسل في مدينة نصر والتجمع. منتجات طبيعة وخالية من الغلوتين. High-quality spices, herbs, nuts, and honey in Cairo. Organic & gluten-free." />
-<meta name="keywords" content="بهارات, أعشاب, مكسرات, عسل, عضوي,طبيعة ,خالي من الغلوتين, مدينة نصر,التجمع , Madinet Nasr, Tagamo3,Fifth Settlement,5th Settlement,New Cairo spices, herbs, nuts, honey, organic, gluten-free, Cairo" />
-  <link rel="canonical" href="https://atspicesstore.com/" />
-
- <!-- Open Graph (Facebook, WhatsApp, Instagram) -->
-<meta property="og:type" content="website" />
-<meta property="og:title" content="A.T. Spices | بهارات، أعشاب، مكسرات وعسل" />
-<meta property="og:description" content="متجر A.T. Spices في مدينة نصر والتجمع – منتجات طبيعة وخالية من الغلوتين. High-quality spices, herbs, nuts, and honey in Cairo." />
-<meta property="og:url" content="https://atspicesstore.com/" />
-<meta property="og:image" content="https://atspicesstore.com/assets/Atlogo-round-ar-1200-630.png" />
-<meta property="og:image:width" content="630" />
-<meta property="og:image:height" content="630" />
-
-<!-- Twitter Card -->
-<meta name="twitter:card" content="summary_large_image" />  
-<meta name="twitter:title" content="A.T. Spices | بهارات، أعشاب، مكسرات وعسل" />
-<meta name="twitter:description" content="متجر بهارات، أعشاب، مكسرات وعسل في مدينة نصر والتجمع – عضوي وخالي من الغلوتين. High-quality spices, herbs, nuts, and honey in Cairo." />
-<meta name="twitter:image" content="https://atspicesstore.com/assets/Atlogo-round-ar-1200-630.png" />
-
-
-
-
-  <!-- Bootstrap 5 -->
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-  />
-
-  <!-- Bootstrap Icons -->
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
-    rel="stylesheet"
-  />
-
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="preload" href="assets/fonts/cairo/Cairo-Arabic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="A.T. Spices">
+  <meta property="og:locale" content="ar_EG">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:title" content="A.T. Spices | بهارات، مكسرات، عسل وعناية شخصية">
+  <meta property="og:description" content="متجر A.T. Spices في مدينة نصر والتجمع – بهارات، مكسرات، عسل ومنتجات عناية مختارة.">
+  <meta property="og:url" content="https://atspicesstore.com/">
+  <meta property="og:image" content="https://atspicesstore.com/assets/Atlogo-round-ar-1200-630.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="A.T. Spices">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="A.T. Spices | بهارات، مكسرات، عسل وعناية شخصية">
+  <meta name="twitter:description" content="متجر بهارات، مكسرات، عسل ومنتجات عناية في مدينة نصر والتجمع. Spices, nuts, honey and personal care in Cairo.">
+  <meta name="twitter:image" content="https://atspicesstore.com/assets/Atlogo-round-ar-1200-630.png">
+  <meta name="twitter:image:alt" content="A.T. Spices">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/app.css">
+  <title>A.T. Spices | المتجر</title>
 </head>
 
 <body>
+  <a class="skip-link" id="skipLink" href="#productsGrid" data-i18n="skipToProducts">تخطَّ إلى المنتجات</a>
+  <site-header></site-header>
 
-<!-- Language Toggle -->
-<div class="language-toggle">
-  <button id="langToggle" class="btn btn-sm langbtn">
-    <span id="langLabel">English</span>
-    <i class="bi bi-translate ms-1 me-1"></i>
-  </button>
-</div>
+  <main id="appMain">
+    <div class="app-view" id="shopView" data-route-view="shop">
+      <section class="hero page-shell" aria-labelledby="heroTitle">
+        <div class="hero-content">
+          <span class="eyebrow"><i class="bi bi-stars" aria-hidden="true"></i> <span data-i18n="heroEyebrow">اختيارات طبيعية بعناية</span></span>
+          <h1 id="heroTitle" data-i18n="heroTitle">نكهات أصيلة،<br><em>من رفّنا إلى بيتك.</em></h1>
+          <p data-i18n="heroText">اكتشف بهارات عطرية، مكسرات طازجة، عسل طبيعي، بخور ومنتجات عناية مختارة.</p>
+          <a class="primary-button" id="browseProducts" href="#productsSection">
+            <span data-i18n="browseProducts">تصفح المنتجات</span>
+            <i class="bi bi-arrow-down" aria-hidden="true"></i>
+          </a>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <div class="hero-logo-wrap">
+            <img src="assets/ATlogo-round-ar-630.png" alt="" width="300" height="300" decoding="async">
+          </div>
+          <span class="floating-card floating-card-one">✦ <b data-i18n="fresh">طازج</b></span>
+          <span class="floating-card floating-card-two">♡ <b data-i18n="selected">مختار بعناية</b></span>
+        </div>
+      </section>
 
-<div class="share-toggle">
-  <button id="shareToggle" class="btn btn-sm sharebtn">
-    <span id="shareLabel" data-i18n="shareClick">شارك</span>
-    <i class="bi bi-share-fill ms-1 me-1"></i>
-  </button>
-</div>
+      <section class="benefits" aria-label="Store benefits">
+        <div class="page-shell benefits-inner">
+          <div><i class="bi bi-patch-check" aria-hidden="true"></i><span data-i18n="quality">جودة نثق بها</span></div>
+          <div><i class="bi bi-box-seam" aria-hidden="true"></i><span data-i18n="packaging">تعبئة بعناية</span></div>
+          <div><i class="bi bi-house-check" aria-hidden="true"></i><span data-i18n="easyOrder">اطلب من بيتك بسهولة</span></div>
+        </div>
+      </section>
 
-<main class="d-flex px-5 justify-content-center align-items-center min-vh-100">
-  <div class="row w-100 justify-content-center">
-    <div class="col-12 col-sm-10 col-md-8 col-lg-6 text-center">
+      <section class="catalog page-shell" id="productsSection" aria-labelledby="productsTitle">
+        <div class="section-heading">
+          <div>
+            <span class="section-kicker" data-i18n="ourCollection">تشكيلتنا</span>
+            <h2 id="productsTitle" data-i18n="findFavorite">اختر ما تحب</h2>
+          </div>
+          <p data-i18n="collectionText">منتجات مختارة للاستخدام اليومي واللحظات المميزة.</p>
+        </div>
+        <div class="catalog-tools">
+          <label class="search-box" for="productSearch">
+            <i class="bi bi-search" aria-hidden="true"></i>
+            <input id="productSearch" type="search" autocomplete="off" data-i18n-placeholder="searchPlaceholder" placeholder="ابحث عن منتج">
+          </label>
+          <div class="filter-scroll-wrap">
+            <div class="filter-scroll" id="filterScroll" aria-label="Product categories">
+              <div class="category-filters" id="categoryFilters"></div>
+            </div>
+            <button class="filter-arrow" id="filterNext" type="button" data-i18n-aria-label="scrollFilters" aria-label="عرض المزيد من التصنيفات">
+              <i class="bi bi-chevron-right" aria-hidden="true"></i>
+            </button>
+          </div>
+          <div class="sort-wrap">
+            <i class="bi bi-sliders" aria-hidden="true"></i>
+            <label class="visually-hidden" for="productSort" data-i18n="sortBy">ترتيب حسب</label>
+            <select id="productSort">
+              <option value="featured" data-i18n="sortFeatured">المميزة</option>
+              <option value="name" data-i18n="sortName">الاسم: أ–ي</option>
+              <option value="price-asc" data-i18n="sortPriceAsc">السعر: الأقل أولاً</option>
+              <option value="price-desc" data-i18n="sortPriceDesc">السعر: الأعلى أولاً</option>
+            </select>
+          </div>
+        </div>
+        <div class="results-line" aria-live="polite">
+          <p id="resultsCount"></p>
+          <button class="text-button" id="clearFilters" type="button" hidden data-i18n="clearFilters">مسح التصفية</button>
+        </div>
+        <div class="product-grid" id="productsGrid"></div>
 
-      <!-- Avatar -->
-      <img
-        src="assets/ATlogo-round-ar.png"
-        alt="A.T. Spices Store"
-        class="avatar mb-3"
-      />
+        <nav class="catalog-pagination" id="catalogPagination" data-i18n-aria-label="paginationLabel" aria-label="صفحات المنتجات" hidden>
+          <label class="page-size" for="pageSize">
+            <span data-i18n="productsPerPage">منتج في الصفحة</span>
+            <select id="pageSize">
+              <option value="10">10</option>
+              <option value="20">20</option>
+            </select>
+          </label>
 
-      <!-- Title -->
-      <h1 class="fw-bold mb-2" data-i18n="title">
-        A.T. Spices
-      </h1>
+          <div class="pagination-controls">
+            <button class="pagination-arrow" id="paginationPrevious" type="button" data-i18n-aria-label="previousPage" aria-label="الصفحة السابقة">
+              <i class="bi bi-chevron-left" aria-hidden="true"></i>
+            </button>
+            <div class="pagination-pages" id="paginationPages"></div>
+            <button class="pagination-arrow" id="paginationNext" type="button" data-i18n-aria-label="nextPage" aria-label="الصفحة التالية">
+              <i class="bi bi-chevron-right" aria-hidden="true"></i>
+            </button>
+          </div>
 
-      <!-- Description -->
-      <p class="mb-4" data-i18n="description">
-        بهارات، أعشاب، والمزيد.<br>
-       ١٠ ب شارع مهدي عرفه ،مشروع ال ١٤ عمارة الحي العاشر - مدينة نصر
-      </p>
+          <p class="page-summary" id="pageSummary"></p>
+        </nav>
 
-      <!-- Links -->
-      <div class="d-grid gap-3">
-
-        <a href="https://maps.app.goo.gl/k5ykCxyC7hBanpLk6" class="link-pill" target="_blank">
-          <i class="bi bi-geo-alt-fill me-2 ms-2"></i>
-          <span data-i18n="location">موقع المتجر</span>
-        </a>
-
-        <a id="whatsappLink" class="link-pill" target="_blank">
-          <i class="bi bi-whatsapp me-2 ms-2"></i>
-          <span data-i18n="whatsapp">واتساب 01036578338</span>
-        </a>
-
-        <a href="https://www.instagram.com/a.tspicess" class="link-pill" target="_blank">
-          <i class="bi bi-instagram me-2 ms-2"></i>
-          <span data-i18n="instagram">إنستجرام</span>
-        </a>
-
-        <a href="https://www.facebook.com/people/AT-Spices/61587448102563/" class="link-pill" target="_blank">
-          <i class="bi bi-facebook me-2 ms-2"></i>
-          <span data-i18n="facebook">فيسبوك</span>
-        </a>
-
-        <a id="emailLink" class="link-pill">
-          <i class="bi bi-envelope-fill me-2 ms-2"></i>
-          <span data-i18n="email">راسلنا</span>
-        </a>
-
-      </div>
-
-      <!-- Footer -->
-      <footer class="mt-5 small text-muted">
-        A.T. Spices © 2026
-      </footer>
-
+        <div class="no-results" id="noResults" hidden>
+          <span>⌕</span>
+          <h3 data-i18n="noResultsTitle">لم نجد منتجات مطابقة</h3>
+          <p data-i18n="noResultsText">جرّب كلمة أخرى أو اعرض كل المنتجات.</p>
+          <button class="secondary-button" id="resetFilters" type="button" data-i18n="showAll">عرض كل المنتجات</button>
+        </div>
+      </section>
     </div>
+
+    <section class="app-view contact-view" id="contactView" data-route-view="contact" aria-labelledby="contactTitle" hidden>
+      <div class="contact-card">
+        <img src="assets/ATlogo-round-ar-630.png" alt="A.T. Spices Store" class="contact-avatar" width="180" height="180" loading="lazy" decoding="async">
+        <span class="section-kicker" data-i18n="contactEyebrow">نحن قريبون منك</span>
+        <h1 id="contactTitle" data-i18n="contactTitle">A.T. Spices</h1>
+        <p class="contact-description" data-i18n="contactDescription">بهارات، أعشاب، والمزيد.<br>١٠ ب شارع مهدي عرفه، مشروع ١٤ عمارة الحي العاشر - مدينة نصر</p>
+        <div class="contact-links">
+          <a href="https://maps.app.goo.gl/k5ykCxyC7hBanpLk6" class="link-pill" target="_blank" rel="noopener noreferrer">
+            <i class="bi bi-geo-alt-fill" aria-hidden="true"></i>
+            <span data-i18n="location">موقع المتجر</span>
+          </a>
+          <a id="whatsappLink" class="link-pill" target="_blank" rel="noopener noreferrer">
+            <i class="bi bi-whatsapp" aria-hidden="true"></i>
+            <span data-i18n="whatsapp">واتساب 01036578338</span>
+          </a>
+          <a href="https://www.instagram.com/a.tspicess" class="link-pill" target="_blank" rel="noopener noreferrer">
+            <i class="bi bi-instagram" aria-hidden="true"></i>
+            <span data-i18n="instagram">إنستجرام</span>
+          </a>
+          <a href="https://www.facebook.com/people/AT-Spices/61587448102563/" class="link-pill" target="_blank" rel="noopener noreferrer">
+            <i class="bi bi-facebook" aria-hidden="true"></i>
+            <span data-i18n="facebook">فيسبوك</span>
+          </a>
+          <a id="emailLink" class="link-pill">
+            <i class="bi bi-envelope-fill" aria-hidden="true"></i>
+            <span data-i18n="email">at.spicesstore@gmail.com</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <site-footer></site-footer>
+  <div class="drawer-overlay" id="drawerOverlay" hidden></div>
+  <aside class="cart-drawer" id="cartDrawer" role="dialog" aria-modal="true" aria-labelledby="cartTitle" aria-hidden="true">
+    <div class="drawer-header">
+      <div>
+        <span class="section-kicker" data-i18n="yourOrder">طلبك</span>
+        <h2 id="cartTitle" data-i18n="shoppingCart">سلة المشتريات</h2>
+      </div>
+      <button class="close-button" id="cartClose" type="button" data-i18n-aria-label="closeCart" aria-label="إغلاق السلة"><i class="bi bi-x-lg" aria-hidden="true"></i></button>
+    </div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="empty-cart" id="emptyCart">
+      <div class="empty-cart-icon"><i class="bi bi-bag" aria-hidden="true"></i></div>
+      <h3 data-i18n="emptyCartTitle">سلتك بانتظار اختياراتك</h3>
+      <p data-i18n="emptyCartText">أضف منتجاتك المفضلة وستظهر هنا.</p>
+      <button class="secondary-button" id="continueShopping" type="button" data-i18n="continueShopping">متابعة التسوق</button>
+    </div>
+    <div class="cart-summary" id="cartSummary" hidden>
+      <div class="summary-row"><span data-i18n="subtotal">الإجمالي</span><strong id="cartTotal"></strong></div>
+      <p class="summary-note" data-i18n="checkoutNote">أرسل طلبك وسنتواصل معك لتأكيد التفاصيل والتوصيل.</p>
+      <button class="order-button" id="placeOrderButton" type="button">
+        <i class="bi bi-bag-check" aria-hidden="true"></i>
+        <span data-i18n="placeOrder">إتمام الطلب</span>
+      </button>
+    </div>
+  </aside>
+  <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true">
+    <i class="bi bi-check-circle-fill" aria-hidden="true"></i>
+    <span id="toastMessage"></span>
   </div>
-</main>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<script src="js/main.js"></script>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Store",
-  "name": "A.T. Spices",
-  "image": "https://atspicesstore.com/assets/ATlogo-round-ar.png",
-  "description": "A.T. Spices – متجر بهارات، أعشاب، مكسرات وعسل في مدينة نصر والتجمع. منتجات عضوية وخالية من الغلوتين.",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "١٠ ب شارع مهدى عارفه مشروع ١٤ عمارة الحي العاشر",
-    "addressLocality": "مدينة نصر",
-    "addressRegion": "القاهرة",
-    "postalCode": "xxxx",
-    "addressCountry": "EG"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": 30.041331,
-    "longitude": 31.378102
-  },
-  "url": "https://atspicesstore.com",
-  "telephone": "+201036578338",
-  "sameAs": [
-    "https://www.facebook.com/people/AT-Spices/61587448102563/",
-    "https://www.instagram.com/a.tspicess"
-  ]
-}
-</script>
-
+  <script src="js/app.js"></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Store",
+    "name": "A.T. Spices",
+    "@id": "https://atspicesstore.com/#store",
+    "image": "https://atspicesstore.com/assets/ATlogo-round-ar-630.png",
+    "logo": "https://atspicesstore.com/assets/ATlogo-round-ar-630.png",
+    "description": "A.T. Spices – متجر بهارات، أعشاب، مكسرات، عسل ومنتجات عناية في مدينة نصر والتجمع.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "١٠ ب شارع مهدى عارفه مشروع ١٤ عمارة الحي العاشر",
+      "addressLocality": "مدينة نصر",
+      "addressRegion": "القاهرة",
+      "addressCountry": "EG"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 30.041331,
+      "longitude": 31.378102
+    },
+    "url": "https://atspicesstore.com",
+    "telephone": "+201036578338",
+    "email": "at.spicesstore@gmail.com",
+    "currenciesAccepted": "EGP",
+    "hasMap": "https://maps.app.goo.gl/k5ykCxyC7hBanpLk6",
+    "areaServed": {
+      "@type": "City",
+      "name": "Cairo"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+201036578338",
+      "contactType": "customer service",
+      "availableLanguage": ["Arabic", "English"]
+    },
+    "sameAs": [
+      "https://www.facebook.com/people/AT-Spices/61587448102563/",
+      "https://www.instagram.com/a.tspicess"
+    ]
+  }
+  </script>
 </body>
 </html>

@@ -1,0 +1,19 @@
+@font-face {
+  font-family: "Cairo";
+  src: url("../assets/fonts/cairo/Cairo-Arabic.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 200 1000;
+  font-display: swap;
+}
+
+html[lang="ar"] {
+  --font-body: "Cairo", Tahoma, Arial, sans-serif;
+}
+
+html[lang="ar"] body,
+html[lang="ar"] button,
+html[lang="ar"] input,
+html[lang="ar"] select,
+html[lang="ar"] textarea {
+  font-family: "Cairo", Tahoma, Arial, sans-serif;
+}

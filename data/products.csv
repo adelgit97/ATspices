@@ -1,0 +1,31 @@
+id,name,name_eng,category,category_eng,description,description_eng,tag,tag_eng,image,active,featured_order,price_125,price_250,price_500,price_1000,price_shaker,price_unit,discount
+test-spice-01,اختبار-بهارات-01,Test-Spice-01,بهارات,Spices,وصف تجريبي لمنتج بهارات رقم 01.,Test description for spice product 01.,اختبار مميز,Test featured,assets/ATlogo-round-ar-630.png,TRUE,1,40,75,140,260,55,,10
+test-nuts-01,اختبار-مكسرات-01,Test-Nuts-01,مكسرات,Nuts,وصف تجريبي لمنتج مكسرات رقم 01.,Test description for nuts product 01.,اختبار جديد,Test new,assets/Atlogo-round-ar-1200-630-c.png,TRUE,2,70,130,240,450,,,0
+test-honey-01,اختبار-عسل-01,Test-Honey-01,عسل,Honey,وصف تجريبي لمنتج عسل رقم 01.,Test description for honey product 01.,اختبار عرض,Test offer,,TRUE,3,,110,200,380,,,5
+test-incense-01,اختبار-بخور-01,Test-Incense-01,بخور,Incense,وصف تجريبي لمنتج بخور رقم 01.,Test description for incense product 01.,اختبار مميز,Test featured,assets/ATlogo-round-ar.png,TRUE,4,,,,,,90,0
+test-care-01,اختبار-عناية-01,Test-Care-01,العناية والجمال,Beauty & Personal Care,وصف تجريبي لمنتج عناية رقم 01.,Test description for care product 01.,اختبار جديد,Test new,,TRUE,5,,,,,,120,0
+test-spice-02,اختبار-بهارات-02,Test-Spice-02,بهارات,Spices,وصف تجريبي لمنتج بهارات رقم 02.,Test description for spice product 02.,اختبار,Test,assets/Atlogo-round-ar-1200-630-c.png,TRUE,6,45,82,150,280,60,,0
+test-nuts-02,اختبار-مكسرات-02,Test-Nuts-02,مكسرات,Nuts,وصف تجريبي لمنتج مكسرات رقم 02.,Test description for nuts product 02.,اختبار عرض,Test offer,,TRUE,7,75,138,255,475,,,8
+test-honey-02,اختبار-عسل-02,Test-Honey-02,عسل,Honey,وصف تجريبي لمنتج عسل رقم 02.,Test description for honey product 02.,اختبار,Test,assets/ATlogo-round-ar-630.png,TRUE,8,,118,215,400,,,0
+test-incense-02,اختبار-بخور-02,Test-Incense-02,بخور,Incense,وصف تجريبي لمنتج بخور رقم 02.,Test description for incense product 02.,اختبار عرض,Test offer,,TRUE,9,,,,,,98,12
+test-care-02,اختبار-عناية-02,Test-Care-02,العناية والجمال,Beauty & Personal Care,وصف تجريبي لمنتج عناية رقم 02.,Test description for care product 02.,اختبار,Test,assets/ATlogo-round-ar.png,TRUE,10,,,,,,130,0
+test-spice-03,اختبار-بهارات-03,Test-Spice-03,بهارات,Spices,وصف تجريبي لمنتج بهارات رقم 03.,Test description for spice product 03.,اختبار جديد,Test new,,TRUE,11,50,90,165,305,65,,0
+test-nuts-03,اختبار-مكسرات-03,Test-Nuts-03,مكسرات,Nuts,وصف تجريبي لمنتج مكسرات رقم 03.,Test description for nuts product 03.,اختبار,Test,assets/ATlogo-round-ar-630.png,TRUE,12,80,145,270,500,,,0
+test-honey-03,اختبار-عسل-03,Test-Honey-03,عسل,Honey,وصف تجريبي لمنتج عسل رقم 03.,Test description for honey product 03.,اختبار مميز,Test featured,assets/Atlogo-round-ar-1200-630-c.png,TRUE,13,,125,230,425,,,0
+test-incense-03,اختبار-بخور-03,Test-Incense-03,بخور,Incense,وصف تجريبي لمنتج بخور رقم 03.,Test description for incense product 03.,اختبار,Test,assets/ATlogo-round-ar.png,TRUE,14,,,,,,105,0
+test-care-03,اختبار-عناية-03,Test-Care-03,العناية والجمال,Beauty & Personal Care,وصف تجريبي لمنتج عناية رقم 03.,Test description for care product 03.,اختبار عرض,Test offer,,TRUE,15,,,,,,140,15
+test-spice-04,اختبار-بهارات-04,Test-Spice-04,بهارات,Spices,وصف تجريبي لمنتج بهارات رقم 04.,Test description for spice product 04.,اختبار عرض,Test offer,assets/ATlogo-round-ar-630.png,TRUE,16,55,98,180,330,70,,7
+test-nuts-04,اختبار-مكسرات-04,Test-Nuts-04,مكسرات,Nuts,وصف تجريبي لمنتج مكسرات رقم 04.,Test description for nuts product 04.,اختبار جديد,Test new,,TRUE,17,85,152,285,525,,,0
+test-honey-04,اختبار-عسل-04,Test-Honey-04,عسل,Honey,وصف تجريبي لمنتج عسل رقم 04.,Test description for honey product 04.,اختبار,Test,assets/ATlogo-round-ar.png,TRUE,18,,132,245,450,,,0
+test-incense-04,اختبار-بخور-04,Test-Incense-04,بخور,Incense,وصف تجريبي لمنتج بخور رقم 04.,Test description for incense product 04.,اختبار جديد,Test new,assets/Atlogo-round-ar-1200-630-c.png,TRUE,19,,,,,,112,0
+test-care-04,اختبار-عناية-04,Test-Care-04,العناية والجمال,Beauty & Personal Care,وصف تجريبي لمنتج عناية رقم 04.,Test description for care product 04.,اختبار,Test,,TRUE,20,,,,,,150,0
+test-spice-05,اختبار-بهارات-05,Test-Spice-05,بهارات,Spices,وصف تجريبي لمنتج بهارات رقم 05.,Test description for spice product 05.,اختبار,Test,assets/ATlogo-round-ar.png,TRUE,21,60,105,195,355,75,,0
+test-nuts-05,اختبار-مكسرات-05,Test-Nuts-05,مكسرات,Nuts,وصف تجريبي لمنتج مكسرات رقم 05.,Test description for nuts product 05.,اختبار عرض,Test offer,assets/ATlogo-round-ar-630.png,TRUE,22,90,160,300,550,,,10
+test-honey-05,اختبار-عسل-05,Test-Honey-05,عسل,Honey,وصف تجريبي لمنتج عسل رقم 05.,Test description for honey product 05.,اختبار جديد,Test new,,TRUE,23,,140,260,475,,,0
+test-incense-05,اختبار-بخور-05,Test-Incense-05,بخور,Incense,وصف تجريبي لمنتج بخور رقم 05.,Test description for incense product 05.,اختبار,Test,assets/ATlogo-round-ar-630.png,TRUE,24,,,,,,120,0
+test-care-05,اختبار-عناية-05,Test-Care-05,العناية والجمال,Beauty & Personal Care,وصف تجريبي لمنتج عناية رقم 05.,Test description for care product 05.,اختبار جديد,Test new,assets/Atlogo-round-ar-1200-630-c.png,TRUE,25,,,,,,160,0
+test-spice-06,اختبار-بهارات-06,Test-Spice-06,بهارات,Spices,وصف تجريبي لمنتج بهارات رقم 06.,Test description for spice product 06.,اختبار عرض,Test offer,,TRUE,26,65,112,210,380,80,,12
+test-nuts-06,اختبار-مكسرات-06,Test-Nuts-06,مكسرات,Nuts,وصف تجريبي لمنتج مكسرات رقم 06.,Test description for nuts product 06.,اختبار,Test,assets/ATlogo-round-ar.png,TRUE,27,95,168,315,575,,,0
+test-honey-06,اختبار-عسل-06,Test-Honey-06,عسل,Honey,وصف تجريبي لمنتج عسل رقم 06.,Test description for honey product 06.,اختبار عرض,Test offer,assets/ATlogo-round-ar-630.png,TRUE,28,,148,275,500,,,9
+test-incense-06,اختبار-بخور-06,Test-Incense-06,بخور,Incense,وصف تجريبي لمنتج بخور رقم 06.,Test description for incense product 06.,اختبار مميز,Test featured,,TRUE,29,,,,,,128,0
+test-care-06,اختبار-عناية-06,Test-Care-06,العناية والجمال,Beauty & Personal Care,وصف تجريبي لمنتج عناية رقم 06.,Test description for care product 06.,اختبار عرض,Test offer,assets/ATlogo-round-ar.png,TRUE,30,,,,,,170,6
