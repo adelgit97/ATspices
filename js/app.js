@@ -1,14 +1,10 @@
 /* Shared header and footer components */
-function routeFromHash() {
-  return window.location.hash.replace(/^#/, "") === "contact" ? "contact" : "shop";
-}
-
 class SiteHeader extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
       <header class="site-header">
         <div class="header-inner header-shell">
-          <a class="brand" href="#shop" data-route-link="shop" aria-label="A.T. Spices">
+          <a class="brand" href="#shopView" aria-label="A.T. Spices">
             <img src="assets/ATlogo-round-ar-630.png" alt="" width="56" height="56">
             <span class="brand-copy">
               <strong>A.T. Spices</strong>
@@ -16,19 +12,12 @@ class SiteHeader extends HTMLElement {
             </span>
           </a>
 
-          <nav class="desktop-nav" aria-label="Primary navigation">
-            <a href="#shop" data-route-link="shop">
-              <i class="bi bi-shop" aria-hidden="true"></i>
-              <span data-i18n="shop">المتجر</span>
-            </a>
-            <a href="#contact" data-route-link="contact">
-              <i class="bi bi-chat-dots" aria-hidden="true"></i>
-              <span data-i18n="contact">تواصل معنا</span>
-            </a>
-          </nav>
-
           <div class="header-actions">
-            <button class="icon-button share-button" id="shareToggle" type="button" data-i18n-aria-label="share" aria-label="شارك" hidden>
+            <button class="icon-button contact-button" id="contactOpen" type="button" aria-controls="contactDrawer" data-i18n-aria-label="contact" aria-label="تواصل معنا">
+              <i class="bi bi-geo-alt-fill" aria-hidden="true"></i>
+              <span class="header-action-label" data-i18n="contact">تواصل معنا</span>
+            </button>
+            <button class="icon-button share-button" id="shareToggle" type="button" data-i18n-aria-label="share" aria-label="شارك">
               <i class="bi bi-share" aria-hidden="true"></i>
               <span class="header-action-label" data-i18n="share">شارك</span>
             </button>
@@ -46,25 +35,7 @@ class SiteHeader extends HTMLElement {
       </header>
     `;
 
-    this.routeHandler = event => this.setRoute(event.detail?.route || "shop");
-    window.addEventListener("app-route-change", this.routeHandler);
     this.querySelector("#shareToggle").addEventListener("click", () => this.sharePage());
-    this.setRoute(routeFromHash());
-  }
-
-  disconnectedCallback() {
-    window.removeEventListener("app-route-change", this.routeHandler);
-  }
-
-  setRoute(route) {
-    this.querySelectorAll("[data-route-link]").forEach(link => {
-      const active = link.dataset.routeLink === route;
-      link.classList.toggle("active", active);
-      if (active) link.setAttribute("aria-current", "page");
-      else link.removeAttribute("aria-current");
-    });
-    this.querySelector("#shareToggle").hidden = route !== "contact";
-    this.querySelector("#cartOpen").hidden = route !== "shop";
   }
 
   async sharePage() {
@@ -105,42 +76,36 @@ class SiteFooter extends HTMLElement {
     this.innerHTML = `
       <footer class="shared-footer">
         <div class="shared-footer-inner footer-shell">
-          <a class="shared-footer-brand" href="#shop" data-route-link="shop" aria-label="A.T. Spices">
-            <img src="assets/ATlogo-round-ar-630.png" alt="" width="48" height="48" loading="lazy">
-            <span>
-              <strong>A.T. Spices</strong>
-              <small data-i18n="footerLine">بهارات، مكسرات، عسل، بخور وعناية شخصية</small>
-            </span>
-          </a>
-          <nav class="shared-footer-nav" aria-label="Footer navigation">
-            <a href="#shop" data-route-link="shop">
-              <i class="bi bi-shop" aria-hidden="true"></i>
-              <span data-i18n="shop">المتجر</span>
+          <div class="footer-identity">
+            <a class="shared-footer-brand" href="#shopView" aria-label="A.T. Spices">
+              <img src="assets/ATlogo-round-ar-630.png" alt="" width="52" height="52" loading="lazy">
+              <span>
+                <strong>A.T. Spices</strong>
+                <small data-i18n="footerLine">بهارات، مكسرات، عسل، بخور وعناية شخصية</small>
+              </span>
             </a>
-            <a href="#contact" data-route-link="contact">
-              <i class="bi bi-chat-dots" aria-hidden="true"></i>
-              <span data-i18n="contact">تواصل معنا</span>
+          
+          </div>
+          <nav class="footer-contact-icons" data-i18n-aria-label="contactLinks" aria-label="روابط التواصل">
+            <a href="https://maps.app.goo.gl/BiupkAsG192nppYC6" target="_blank" rel="noopener noreferrer" data-i18n-aria-label="location" aria-label="موقع المتجر">
+              <i class="bi bi-geo-alt-fill" aria-hidden="true"></i>
+            </a>
+            <a id="footerWhatsappLink" target="_blank" rel="noopener noreferrer" data-i18n-aria-label="whatsapp" aria-label="واتساب 01036578338">
+              <i class="bi bi-whatsapp" aria-hidden="true"></i>
+            </a>
+            <a href="https://www.instagram.com/a.tspicess" target="_blank" rel="noopener noreferrer" data-i18n-aria-label="instagram" aria-label="إنستجرام">
+              <i class="bi bi-instagram" aria-hidden="true"></i>
+            </a>
+            <a href="https://www.facebook.com/people/AT-Spices/61587448102563/" target="_blank" rel="noopener noreferrer" data-i18n-aria-label="facebook" aria-label="فيسبوك">
+              <i class="bi bi-facebook" aria-hidden="true"></i>
+            </a>
+            <a id="footerEmailLink" data-i18n-aria-label="email" aria-label="at.spicesstore@gmail.com">
+              <i class="bi bi-envelope-fill" aria-hidden="true"></i>
             </a>
           </nav>
-          <p class="shared-footer-copy">A.T. Spices © 2026</p>
         </div>
       </footer>
     `;
-
-    this.routeHandler = event => this.setRoute(event.detail?.route || "shop");
-    window.addEventListener("app-route-change", this.routeHandler);
-    this.setRoute(routeFromHash());
-  }
-
-  disconnectedCallback() {
-    window.removeEventListener("app-route-change", this.routeHandler);
-  }
-
-  setRoute(route) {
-    this.querySelectorAll("[data-route-link]").forEach(link => {
-      if (link.dataset.routeLink === route) link.setAttribute("aria-current", "page");
-      else link.removeAttribute("aria-current");
-    });
   }
 }
 
@@ -169,6 +134,8 @@ const translations = {
     brandLine: "نكهة تستحق المشاركة",
     shop: "المتجر",
     contact: "تواصل معنا",
+    closeContact: "إغلاق معلومات التواصل",
+    contactLinks: "روابط التواصل",
     share: "شارك",
     changeLanguage: "تغيير اللغة",
     cart: "السلة",
@@ -254,6 +221,8 @@ const translations = {
     brandLine: "Flavor worth sharing",
     shop: "Shop",
     contact: "Contact us",
+    closeContact: "Close contact information",
+    contactLinks: "Contact links",
     share: "Share",
     changeLanguage: "Change language",
     cart: "Cart",
@@ -365,7 +334,6 @@ const sizeColumns = [
 
 const state = {
   lang: resolveInitialLanguage(),
-  route: "shop",
   category: "all",
   search: "",
   sort: "featured",
@@ -376,13 +344,17 @@ const state = {
 
 const elements = {
   skipLink: document.getElementById("skipLink"),
-  shopView: document.getElementById("shopView"),
-  contactView: document.getElementById("contactView"),
   browseProducts: document.getElementById("browseProducts"),
   emailLink: document.getElementById("emailLink"),
   whatsappLink: document.getElementById("whatsappLink"),
+  footerEmailLink: document.getElementById("footerEmailLink"),
+  footerWhatsappLink: document.getElementById("footerWhatsappLink"),
   langToggle: document.getElementById("langToggle"),
   langLabel: document.getElementById("langLabel"),
+  contactOpen: document.getElementById("contactOpen"),
+  contactClose: document.getElementById("contactClose"),
+  contactOverlay: document.getElementById("contactOverlay"),
+  contactDrawer: document.getElementById("contactDrawer"),
   categoryFilters: document.getElementById("categoryFilters"),
   filterScroll: document.getElementById("filterScroll"),
   filterNext: document.getElementById("filterNext"),
@@ -577,35 +549,8 @@ function t(key, values = {}) {
   return value;
 }
 
-function resolveRoute() {
-  return window.location.hash.replace(/^#/, "") === "contact" ? "contact" : "shop";
-}
-
 function updateDocumentTitle() {
-  if (state.route === "contact") {
-    document.title = state.lang === "ar" ? "A.T. Spices | تواصل معنا" : "A.T. Spices | Contact us";
-  } else {
-    document.title = state.lang === "ar" ? "A.T. Spices | المتجر" : "A.T. Spices | Shop";
-  }
-}
-
-function applyRoute(route, { resetScroll = true } = {}) {
-  state.route = route === "contact" ? "contact" : "shop";
-  const showingShop = state.route === "shop";
-  elements.shopView.hidden = !showingShop;
-  elements.contactView.hidden = showingShop;
-  elements.skipLink.hidden = !showingShop;
-  document.body.dataset.route = state.route;
-  updateDocumentTitle();
-
-  if (!showingShop && elements.cartDrawer.classList.contains("open")) closeCart();
-  if (showingShop) initializeCatalog();
-
-  window.dispatchEvent(new CustomEvent("app-route-change", {
-    detail: { route: state.route }
-  }));
-
-  if (resetScroll) requestAnimationFrame(() => window.scrollTo({ top: 0, behavior: "auto" }));
+  document.title = state.lang === "ar" ? "A.T. Spices | المتجر" : "A.T. Spices | Shop";
 }
 
 function localized(product, field) {
@@ -647,8 +592,12 @@ function applyLanguage(lang) {
   });
 
   elements.langLabel.textContent = lang === "ar" ? "English" : "عربي";
-  elements.emailLink.href = `mailto:${EMAIL}?subject=${encodeURIComponent(t("emailSubject"))}&body=${encodeURIComponent(t("emailBody"))}`;
-  elements.whatsappLink.href = `https://wa.me/${PHONE}?text=${encodeURIComponent(t("whatsappText"))}`;
+  const emailHref = `mailto:${EMAIL}?subject=${encodeURIComponent(t("emailSubject"))}&body=${encodeURIComponent(t("emailBody"))}`;
+  const whatsappHref = `https://wa.me/${PHONE}?text=${encodeURIComponent(t("whatsappText"))}`;
+  elements.emailLink.href = emailHref;
+  elements.footerEmailLink.href = emailHref;
+  elements.whatsappLink.href = whatsappHref;
+  elements.footerWhatsappLink.href = whatsappHref;
   if (catalogReady) {
     renderFilters();
     renderProducts();
@@ -1112,27 +1061,45 @@ function removeCartItem(lineId) {
   renderCart();
 }
 
-function openCart() {
+function openDrawer(drawer, overlay, closeButton) {
   lastFocusedElement = document.activeElement;
-  elements.drawerOverlay.hidden = false;
-  elements.cartDrawer.setAttribute("aria-hidden", "false");
+  overlay.hidden = false;
+  drawer.setAttribute("aria-hidden", "false");
   document.body.classList.add("drawer-open");
   requestAnimationFrame(() => {
-    elements.drawerOverlay.classList.add("visible");
-    elements.cartDrawer.classList.add("open");
-    elements.cartClose.focus();
+    overlay.classList.add("visible");
+    drawer.classList.add("open");
+    closeButton.focus();
   });
 }
 
-function closeCart() {
-  elements.drawerOverlay.classList.remove("visible");
-  elements.cartDrawer.classList.remove("open");
-  elements.cartDrawer.setAttribute("aria-hidden", "true");
-  document.body.classList.remove("drawer-open");
+function closeDrawer(drawer, overlay) {
+  overlay.classList.remove("visible");
+  drawer.classList.remove("open");
+  drawer.setAttribute("aria-hidden", "true");
+  if (!elements.cartDrawer.classList.contains("open") && !elements.contactDrawer.classList.contains("open")) {
+    document.body.classList.remove("drawer-open");
+  }
   window.setTimeout(() => {
-    elements.drawerOverlay.hidden = true;
+    overlay.hidden = true;
     lastFocusedElement?.focus();
   }, 300);
+}
+
+function openCart() {
+  openDrawer(elements.cartDrawer, elements.drawerOverlay, elements.cartClose);
+}
+
+function closeCart() {
+  closeDrawer(elements.cartDrawer, elements.drawerOverlay);
+}
+
+function openContact() {
+  openDrawer(elements.contactDrawer, elements.contactOverlay, elements.contactClose);
+}
+
+function closeContact() {
+  closeDrawer(elements.contactDrawer, elements.contactOverlay);
 }
 
 function showToast(message) {
@@ -1244,6 +1211,9 @@ document.addEventListener("pointerdown", event => {
 });
 elements.clearFilters.addEventListener("click", resetFilters);
 elements.resetFilters.addEventListener("click", resetFilters);
+elements.contactOpen.addEventListener("click", openContact);
+elements.contactClose.addEventListener("click", closeContact);
+elements.contactOverlay.addEventListener("click", closeContact);
 elements.cartOpen.addEventListener("click", openCart);
 elements.cartClose.addEventListener("click", closeCart);
 elements.drawerOverlay.addEventListener("click", closeCart);
@@ -1252,17 +1222,13 @@ elements.placeOrderButton.addEventListener("click", submitOrder);
 document.addEventListener("keydown", event => {
   if (event.key === "Escape") closeProductDescriptions();
   if (event.key === "Escape" && elements.cartDrawer.classList.contains("open")) closeCart();
+  if (event.key === "Escape" && elements.contactDrawer.classList.contains("open")) closeContact();
 });
 window.addEventListener("resize", updateFilterArrow);
-window.addEventListener("hashchange", () => {
-  const hash = window.location.hash.replace(/^#/, "");
-  applyRoute(resolveRoute(), { resetScroll: hash === "shop" || hash === "contact" });
-});
 
 registerServiceWorker();
 localStorage.removeItem("at-spices-products-v1");
 localStorage.removeItem("at-spices-products-v2");
-if (!window.location.hash) history.replaceState(null, "", "#shop");
-state.route = resolveRoute();
+if (window.location.hash === "#contact") history.replaceState(null, "", "#shopView");
 applyLanguage(state.lang);
-applyRoute(state.route, { resetScroll: false });
+initializeCatalog();

@@ -38,7 +38,7 @@
   <site-header></site-header>
 
   <main id="appMain">
-    <div class="app-view" id="shopView" data-route-view="shop">
+    <div id="shopView">
       <section class="hero page-shell" aria-labelledby="heroTitle">
         <div class="hero-content">
           <span class="eyebrow"><i class="bi bi-stars" aria-hidden="true"></i> <span data-i18n="heroEyebrow">اختيارات طبيعية بعناية</span></span>
@@ -134,40 +134,50 @@
         </div>
       </section>
     </div>
-
-    <section class="app-view contact-view" id="contactView" data-route-view="contact" aria-labelledby="contactTitle" hidden>
-      <div class="contact-card">
-        <img src="assets/ATlogo-round-ar-630.png" alt="A.T. Spices Store" class="contact-avatar" width="180" height="180" loading="lazy" decoding="async">
-        <span class="section-kicker" data-i18n="contactEyebrow">نحن قريبون منك</span>
-        <h1 id="contactTitle" data-i18n="contactTitle">A.T. Spices</h1>
-        <p class="contact-description" data-i18n="contactDescription">بهارات، أعشاب، والمزيد.<br>١٠ ب شارع مهدي عرفه، مشروع ١٤ عمارة الحي العاشر - مدينة نصر</p>
-        <div class="contact-links">
-          <a href="https://maps.app.goo.gl/k5ykCxyC7hBanpLk6" class="link-pill" target="_blank" rel="noopener noreferrer">
-            <i class="bi bi-geo-alt-fill" aria-hidden="true"></i>
-            <span data-i18n="location">موقع المتجر</span>
-          </a>
-          <a id="whatsappLink" class="link-pill" target="_blank" rel="noopener noreferrer">
-            <i class="bi bi-whatsapp" aria-hidden="true"></i>
-            <span data-i18n="whatsapp">واتساب 01036578338</span>
-          </a>
-          <a href="https://www.instagram.com/a.tspicess" class="link-pill" target="_blank" rel="noopener noreferrer">
-            <i class="bi bi-instagram" aria-hidden="true"></i>
-            <span data-i18n="instagram">إنستجرام</span>
-          </a>
-          <a href="https://www.facebook.com/people/AT-Spices/61587448102563/" class="link-pill" target="_blank" rel="noopener noreferrer">
-            <i class="bi bi-facebook" aria-hidden="true"></i>
-            <span data-i18n="facebook">فيسبوك</span>
-          </a>
-          <a id="emailLink" class="link-pill">
-            <i class="bi bi-envelope-fill" aria-hidden="true"></i>
-            <span data-i18n="email">at.spicesstore@gmail.com</span>
-          </a>
-        </div>
-      </div>
-    </section>
   </main>
 
   <site-footer></site-footer>
+
+  <div class="drawer-overlay" id="contactOverlay" hidden></div>
+  <aside class="contact-drawer" id="contactDrawer" role="dialog" aria-modal="true" aria-labelledby="contactDrawerTitle" aria-hidden="true">
+    <div class="drawer-header">
+      <div>
+        <span class="section-kicker" data-i18n="contactEyebrow">نحن قريبون منك</span>
+        <h2 id="contactDrawerTitle" data-i18n="contact">تواصل معنا</h2>
+      </div>
+      <button class="close-button" id="contactClose" type="button" data-i18n-aria-label="closeContact" aria-label="إغلاق معلومات التواصل">
+        <i class="bi bi-x-lg" aria-hidden="true"></i>
+      </button>
+    </div>
+    <div class="contact-drawer-content">
+      <img src="assets/ATlogo-round-ar-630.png" alt="A.T. Spices Store" class="contact-avatar" width="150" height="150" loading="lazy" decoding="async">
+      <h3>A.T. Spices</h3>
+      <p class="contact-description" data-i18n="contactDescription">بهارات، أعشاب، والمزيد.<br>١٠ ب شارع مهدي عرفه، مشروع ١٤ عمارة الحي العاشر - مدينة نصر</p>
+      <div class="contact-links">
+        <a href="https://maps.app.goo.gl/BiupkAsG192nppYC6" class="link-pill" target="_blank" rel="noopener noreferrer">
+          <i class="bi bi-geo-alt-fill" aria-hidden="true"></i>
+          <span data-i18n="location">موقع المتجر</span>
+        </a>
+        <a id="whatsappLink" class="link-pill" target="_blank" rel="noopener noreferrer">
+          <i class="bi bi-whatsapp" aria-hidden="true"></i>
+          <span data-i18n="whatsapp">واتساب 01036578338</span>
+        </a>
+        <a href="https://www.instagram.com/a.tspicess" class="link-pill" target="_blank" rel="noopener noreferrer">
+          <i class="bi bi-instagram" aria-hidden="true"></i>
+          <span data-i18n="instagram">إنستجرام</span>
+        </a>
+        <a href="https://www.facebook.com/people/AT-Spices/61587448102563/" class="link-pill" target="_blank" rel="noopener noreferrer">
+          <i class="bi bi-facebook" aria-hidden="true"></i>
+          <span data-i18n="facebook">فيسبوك</span>
+        </a>
+        <a id="emailLink" class="link-pill">
+          <i class="bi bi-envelope-fill" aria-hidden="true"></i>
+          <span data-i18n="email">at.spicesstore@gmail.com</span>
+        </a>
+      </div>
+    </div>
+  </aside>
+
   <div class="drawer-overlay" id="drawerOverlay" hidden></div>
   <aside class="cart-drawer" id="cartDrawer" role="dialog" aria-modal="true" aria-labelledby="cartTitle" aria-hidden="true">
     <div class="drawer-header">
@@ -224,7 +234,7 @@
     "telephone": "+201036578338",
     "email": "at.spicesstore@gmail.com",
     "currenciesAccepted": "EGP",
-    "hasMap": "https://maps.app.goo.gl/k5ykCxyC7hBanpLk6",
+    "hasMap": "https://maps.app.goo.gl/BiupkAsG192nppYC6",
     "areaServed": {
       "@type": "City",
       "name": "Cairo"
