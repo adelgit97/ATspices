@@ -213,7 +213,7 @@ const translations = {
     weight250: "250 جم",
     weight500: "500 جم",
     weight1000: "1 كجم",
-    shaker: "عبوة رش",
+    shaker: "ملاحة",
     unit: "قطعة"
   },
   en: {
@@ -789,7 +789,7 @@ function createProductCard(product) {
   options.forEach(option => {
     const optionElement = document.createElement("option");
     optionElement.value = option.key;
-    optionElement.textContent = `${option.label} · ${formatPrice(option.price)}`;
+    optionElement.textContent = `${option.label} - ${formatPrice(option.price)}`;
     select.append(optionElement);
   });
 
@@ -997,7 +997,7 @@ function createCartItem(item) {
   const title = document.createElement("h3");
   title.textContent = localized(details.product, "name");
   const variant = document.createElement("p");
-  variant.textContent = `${details.option.label} · ${formatPrice(details.option.price)}`;
+  variant.textContent = `${details.option.label} - ${formatPrice(details.option.price)}`;
 
   const quantity = document.createElement("div");
   quantity.className = "quantity-control";
