@@ -1,20 +1,32 @@
-const CACHE_NAME = "at-spices-shop-v8";
+importScripts("./js/deployment-version.js");
+
+const DEPLOYMENT_VERSION = String(self.AT_SPICES_DEPLOYMENT_VERSION || "dev");
+const CACHE_PREFIX = "at-spices-shop-";
+const CACHE_NAME = `${CACHE_PREFIX}${DEPLOYMENT_VERSION}`;
 const PRECACHE_URLS = [
   "./",
   "./index.html",
   "./css/app.css",
   "./css/fonts.css",
+  "./js/deployment-version.js",
   "./js/app.js",
+  "./data/products.csv",
   "./assets/ATlogo-round-ar-630.png",
   "./assets/fonts/cairo/Cairo-Arabic.woff2"
 ];
 
+async function precacheFresh() {
+  const cache = await caches.open(CACHE_NAME);
+  await Promise.all(PRECACHE_URLS.map(async url => {
+    const request = new Request(new URL(url, self.registration.scope), { cache: "reload" });
+    const response = await fetch(request);
+    if (!response.ok) throw new Error(`Could not cache ${url}.`);
+    await cache.put(request, response);
+  }));
+}
+
 self.addEventListener("install", event => {
-  event.waitUntil(
-    caches.open(CACHE_NAME)
-      .then(cache => cache.addAll(PRECACHE_URLS))
-      .then(() => self.skipWaiting())
-  );
+  event.waitUntil(precacheFresh().then(() => self.skipWaiting()));
 });
 
 self.addEventListener("activate", event => {
@@ -22,48 +34,26 @@ self.addEventListener("activate", event => {
     caches.keys()
       .then(keys => Promise.all(
         keys
-          .filter(key => key.startsWith("at-spices-shop-") && key !== CACHE_NAME)
+          .filter(key => key.startsWith(CACHE_PREFIX) && key !== CACHE_NAME)
           .map(key => caches.delete(key))
       ))
       .then(() => self.clients.claim())
   );
 });
 
-async function networkFirst(request) {
+async function cacheFirst(request) {
   const cache = await caches.open(CACHE_NAME);
-  try {
-    const response = await fetch(request);
-    if (response.ok) await cache.put(request, response.clone());
-    return response;
-  } catch (error) {
-    const cached = await cache.match(request, { ignoreSearch: true });
-    if (cached) return cached;
-    throw error;
-  }
-}
-
-async function staleWhileRevalidate(request) {
-  const cache = await caches.open(CACHE_NAME);
-  const cached = await cache.match(request, { ignoreSearch: true });
-  const network = fetch(request).then(response => {
-    if (response.ok) cache.put(request, response.clone());
-    return response;
-  }).catch(() => null);
+  const cached = await cache.match(request);
   if (cached) return cached;
-  return await network || Response.error();
+
+  const response = await fetch(request);
+  if (response.ok) await cache.put(request, response.clone());
+  return response;
 }
 
 self.addEventListener("fetch", event => {
   const { request } = event;
   const url = new URL(request.url);
   if (request.method !== "GET" || url.origin !== self.location.origin) return;
-
-  if (request.mode === "navigate" || url.pathname.endsWith("/data/products.csv")) {
-    event.respondWith(networkFirst(request));
-    return;
-  }
-
-  if (["style", "script", "font", "image"].includes(request.destination)) {
-    event.respondWith(staleWhileRevalidate(request));
-  }
+  event.respondWith(cacheFirst(request));
 });

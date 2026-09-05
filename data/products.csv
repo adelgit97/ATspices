@@ -1,340 +1,348 @@
-﻿id,name,name_eng,category,category_eng,description,description_eng,tag,tag_eng,image,active,featured_order,price_125,price_250,price_500,price_1000,price_shaker,price_unit,discount
-1,كمون,Cumin,بهارات,Spices,,,,,,TRUE,,45,90,180,360,,,0
-2,بذر رجله,Purslane Seeds,بهارات,Spices,,,,,,TRUE,,40,80,160,320,,,0
-3,فلفل,Black Pepper,بهارات,Spices,,,,,,TRUE,,60,120,240,480,,,0
-4,دوم,Doum Palm,بهارات,Spices,,,,,,TRUE,,30,60,120,240,,,0
-5,كزبره,Coriander,بهارات,Spices,,,,,,TRUE,,20,40,80,160,,,0
-6,شطه مطحونه,Ground Chili,بهارات,Spices,,,,,,TRUE,,30,60,120,240,,,0
-7,شطه قرون,Whole Chili Peppers,بهارات,Spices,,,,,,TRUE,,30,60,120,240,,,0
-8,بهرات ٧,Seven Spice Blend,بهارات,Spices,,,,,,TRUE,,60,120,240,480,,,0
-9,بهرات فراخ,Chicken Spice Blend,بهارات,Spices,,,,,,TRUE,,60,120,240,480,,,0
-10,بهرات سمك,Fish Spice Blend,بهارات,Spices,,,,,,TRUE,,60,120,240,480,,,0
-11,بهرات كبسه,Kabsa Spice Blend,بهارات,Spices,,,,,,TRUE,,60,120,240,480,,,0
-12,بهرات حواوشي,Hawawshi Spice Blend,بهارات,Spices,,,,,,TRUE,,60,120,240,480,,,0
-13,كاري,Curry Powder,بهارات,Spices,,,,,,TRUE,,60,120,240,480,,,0
-14,كبابه صيني,Cubeb Pepper,بهارات,Spices,,,,,,TRUE,,100,200,400,800,,,0
-15,حبهان,Cardamom,بهارات,Spices,,,,,,TRUE,,350,700,1400,2800,,,0
-16,مرقه لحمه,Beef Stock Powder,بهارات,Spices,,,,,,TRUE,,40,80,160,320,,,0
-17,مرقه فراخ,Chicken Stock Powder,بهارات,Spices,,,,,,TRUE,,40,80,160,320,,,0
-18,شرق اقصه,Far East Spice Blend,بهارات,Spices,,,,,,TRUE,,60,120,240,480,,,0
-19,محشي,Mahshi Spice Blend,بهارات,Spices,,,,,,TRUE,,60,120,240,480,,,0
-20,جوزه طيب,Nutmeg,بهارات,Spices,,,,,,TRUE,,225,450,900,1800,,,0
-21,قرفه مطحون,Ground Cinnamon,بهارات,Spices,,,,,,TRUE,,60,120,240,480,,,0
-22,قرفه سيجار,Cinnamon Sticks,بهارات,Spices,,,,,,TRUE,,60,120,240,480,,,0
-23,شطه خشنه,Crushed Chili,بهارات,Spices,,,,,,TRUE,,60,120,240,480,,,0
-24,مقوي عام,General Tonic Blend,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-25,أعشاب سكر,Diabetes Herbal Blend,بهارات,Spices,,,,,,TRUE,,187.5,375,750,1500,,,0
-26,أعشاب أملاح,Salt Balance Herbal Blend,بهارات,Spices,,,,,,TRUE,,187.5,375,750,1500,,,0
-27,أعشاب قولون,Colon Herbal Blend,بهارات,Spices,,,,,,TRUE,,187.5,375,750,1500,,,0
-28,أعشاب كحه,Cough Herbal Blend,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-29,بصل,Onion Powder,بهارات,Spices,,,,,,TRUE,,30,60,120,240,,,0
-30,ثوم,Garlic Powder,بهارات,Spices,,,,,,TRUE,,30,60,120,240,,,0
-31,جنزبيل,Ginger,بهارات,Spices,,,,,,TRUE,,60,120,240,480,,,0
-32,فلفل ابيض,White Pepper,بهارات,Spices,,,,,,TRUE,,75,150,300,600,,,0
-33,كراويه,Caraway,بهارات,Spices,,,,,,TRUE,,30,60,120,240,,,0
-34,ينسون نجوم,Star Anise,بهارات,Spices,,,,,,TRUE,,100,200,400,800,,,0
-35,لمون اسود,Dried Black Lime,بهارات,Spices,,,,,,TRUE,,30,60,120,240,,,0
-36,شمر,Fennel,بهارات,Spices,,,,,,TRUE,,30,60,120,240,,,0
-37,روزماري,Rosemary,بهارات,Spices,,,,,,TRUE,,30,60,120,240,,,0
-38,زعتر,Thyme,بهارات,Spices,,,,,,TRUE,,40,80,160,320,,,0
-39,ملح صيني,Monosodium Glutamate,بهارات,Spices,,,,,,TRUE,,20,40,80,160,,,0
-40,كربناتو,Bicarbonate,بهارات,Spices,,,,,,TRUE,,20,40,80,160,,,0
-41,بابريكا,Paprika,بهارات,Spices,,,,,,TRUE,,40,80,160,320,,,0
-42,سمسم محمص,Roasted Sesame,بهارات,Spices,,,,,,TRUE,,20,40,80,160,,,0
-43,سمسم ابيض,White Sesame,بهارات,Spices,,,,,,TRUE,,20,40,80,160,,,0
-44,شوفان,Oats,بهارات,Spices,,,,,,TRUE,,15,30,60,120,,,0
-45,شفان ناعم,Fine Oats,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-46,شعير ناعم,Fine Barley,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-47,مغات,Moghat,بهارات,Spices,,,,,,TRUE,,100,200,400,800,,,0
-48,كاكاو,Cocoa Powder,بهارات,Spices,,,,,,TRUE,,80,160,320,640,,,0
-49,لبن,Milk Powder,بهارات,Spices,,,,,,TRUE,,40,80,160,320,,,0
-50,خميره,Yeast,بهارات,Spices,,,,,,TRUE,,75,150,300,600,,,0
-51,محلب ابيض,White Mahlab,بهارات,Spices,,,,,,TRUE,,250,500,1000,2000,,,0
-52,أقحوان,Chrysanthemum,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-53,تين فيل,Elephant Fig,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-54,شاي اخضر,Green Tea,بهارات,Spices,,,,,,TRUE,,60,120,240,480,,,0
-55,عود صليبه,Oud Saliba,بهارات,Spices,,,,,,TRUE,,500,1000,2000,4000,,,0
-56,سوبيا,Sobia Mix,بهارات,Spices,,,,,,TRUE,,30,60,120,240,,,0
-57,هندباء,Chicory,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-58,دم غزال,Aker Fassi Powder,العناية والجمال,Beauty & Personal Care,,,,,,FALSE,,,,,,,,0
-59,يذر رجله,Purslane Seeds,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-60,خله بلدي,Khella Seeds,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-61,ذيل حصان,Horsetail,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-62,جينكا,Ginkgo,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-63,بلح كابلي,Kabli Dates,مكسرات,Nuts,,,,,,TRUE,,500,1000,2000,4000,,,0
-64,بخور,Incense,بخور,Incense,,,,,,FALSE,,,,,,,,0
-65,بخور,Incense,بخور,Incense,,,,,,FALSE,,,,,,,,0
-66,بخور,Incense,بخور,Incense,,,,,,FALSE,,,,,,,,0
-67,جاوي,Benzoin Resin,بخور,Incense,,,,,,FALSE,,,,,,,,0
-68,ملح هيملايا,Himalayan Salt,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-69,بخور,Incense,بخور,Incense,,,,,,FALSE,,,,,,,,0
-70,ورق اي,Waraq Ay,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-71,قاطونه,Psyllium Husk,بهارات,Spices,,,,,,TRUE,,75,150,300,600,,,0
-72,قشور سليم,Salim Bark,بهارات,Spices,,,,,,TRUE,,100,200,400,800,,,0
-73,حجر قدس,Jerusalem Stone,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-74,جحر,Jahr Herb,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-75,ينسون بلدي,Anise Seeds,بهارات,Spices,,,,,,TRUE,,30,60,120,240,,,0
-76,حلبه حصا,Whole Fenugreek,بهارات,Spices,,,,,,TRUE,,10,20,40,80,,,0
-77,حلبه مطحونه,Ground Fenugreek,بهارات,Spices,,,,,,TRUE,,30,60,120,240,,,0
-78,عرقسوس,Licorice,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-79,كتان,Flaxseed,بهارات,Spices,,,,,,TRUE,,60,120,240,480,,,0
-80,حب رشاد,Garden Cress Seeds,بهارات,Spices,,,,,,TRUE,,60,120,240,480,,,0
-81,بزر جرجير,Arugula Seeds,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-82,بذر بصل,Onion Seeds,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-83,بقدونس,Parsley,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-84,كرفس,Celery,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-85,شبت,Dill,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-86,هند شعير,Hind Shaeer,بهارات,Spices,,,,,,TRUE,,150,300,600,1200,,,0
-87,قرع عسل,Pumpkin,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-88,سندرس,Sandarac Resin,بخور,Incense,,,,,,FALSE,,,,,,,,0
-89,صمغ عربي صحيح,Whole Gum Arabic,بهارات,Spices,,,,,,TRUE,,100,200,400,800,,,0
-90,صمغ عربي مطحون,Ground Gum Arabic,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-91,مرايه عفريت,Mirayat Afreet,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-92,شبه حصا,Alum Crystals,العناية والجمال,Beauty & Personal Care,,,,,,TRUE,,30,60,120,240,,,0
-93,سماق حب,Whole Sumac,بهارات,Spices,,,,,,TRUE,,100,200,400,800,,,0
-94,حلبه محوجه,Spiced Fenugreek,بهارات,Spices,,,,,,TRUE,,30,60,120,240,,,0
-95,فول صويا,Soybeans,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-96,حنه بيضاء,White Henna,العناية والجمال,Beauty & Personal Care,,,,,,TRUE,,100,200,400,800,,,0
-97,حبه بركه,Nigella Seeds,بهارات,Spices,,,,,,TRUE,,60,120,240,480,,,0
-98,بردقوش,Marjoram,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-99,زنجبيل ناعم,Fine Ground Ginger,بهارات,Spices,,,,,,TRUE,,60,120,240,480,,,0
-100,شوفان حراز,Haraz Oats,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-101,دقيق شوفان,Oat Flour,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-102,حلتيت,Asafoetida,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-103,مر بطارخ,Mur Batarikh,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-104,ورق سدر,Sidr Leaves,بهارات,Spices,,,,,,TRUE,,40,80,160,320,,,0
-105,روز ماري صحيح,Whole Rosemary,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-106,زعتر مصري,Egyptian Thyme,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-107,مستكه صيني,Chinese Mastic,بهارات,Spices,,,,,,TRUE,,100,200,400,800,,,0
-108,عين عفريت,Ain Afreet,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-109,قرض ناعم,Ground Acacia Pods,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-110,قسط هندي ناعم,Ground Indian Costus,بهارات,Spices,,,,,,TRUE,,100,200,400,800,,,0
-111,قسط هندي حصا,Whole Indian Costus,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-112,راوند ناعم,Ground Rhubarb Root,بهارات,Spices,,,,,,TRUE,,100,200,400,800,,,0
-113,طمي مغربي,Moroccan Clay,العناية والجمال,Beauty & Personal Care,,,,,,FALSE,,,,,,,,0
-114,ترمس ناعم,Ground Lupin,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-115,قشر رمان ناعم,Ground Pomegranate Peel,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-116,قشر رمان حصا,Whole Pomegranate Peel,بهارات,Spices,,,,,,TRUE,,60,120,240,480,,,0
-117,ريحان مجروش,Crushed Basil,بهارات,Spices,,,,,,TRUE,,60,120,240,480,,,0
-118,نعناع بلدي مجروش,Crushed Egyptian Mint,بهارات,Spices,,,,,,TRUE,,30,60,120,240,,,0
-119,ورق قراص,Nettle Leaves,بهارات,Spices,,,,,,TRUE,,60,120,240,480,,,0
-120,بيكربنات صوديوم,Sodium Bicarbonate,بهارات,Spices,,,,,,TRUE,,20,40,80,160,,,0
-121,لبان دكر,Frankincense,بخور,Incense,,,,,,TRUE,,125,250,500,1000,,,0
-122,سموه مغربله,Samoa Maghrabala,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-123,زهره العايق,Larkspur Flower,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-124,حرجل,Hargal Herb,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-125,بزر حرمل,Syrian Rue Seeds,بهارات,Spices,,,,,,TRUE,,100,200,400,800,,,0
-126,بذر خردل,Mustard Seeds,بهارات,Spices,,,,,,TRUE,,60,120,240,480,,,0
-127,مورينجا,Moringa,بهارات,Spices,,,,,,TRUE,,100,200,400,800,,,0
-128,مورينجا,Moringa,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-129,حشيشه الملائكيه,Angelica Herb,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-130,حشيشه الدينار,Hops,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-131,اشوجاندا حصا,Whole Ashwagandha,بهارات,Spices,,,,,,TRUE,,150,300,600,1200,,,0
-132,اشواجندا نعاه,Ground Ashwagandha,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-133,مليشيا,Melissa Herb,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-134,شيخ بلدي,Egyptian Wormwood,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-135,قرض حصا,Whole Acacia Pods,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-136,سنامكه ورق,Senna Leaves,بهارات,Spices,,,,,,TRUE,,100,200,400,800,,,0
-137,سنامكه قرون,Senna Pods,بهارات,Spices,,,,,,TRUE,,100,200,400,800,,,0
-138,مرمريه ورق,Sage Leaves,بهارات,Spices,,,,,,TRUE,,60,120,240,480,,,0
-139,رجل اسد,Lady's Mantle,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-140,ينسون نجوم,Star Anise,بهارات,Spices,,,,,,TRUE,,100,200,400,800,,,0
-141,ورق زيتون,Olive Leaves,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-142,ورق تين,Fig Leaves,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-143,ورق توت,Mulberry Leaves,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-144,زعرور,Hawthorn,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-145,حلفا بر,Halfa Bar Herb,بهارات,Spices,,,,,,TRUE,,100,200,400,800,,,0
-146,شعير,Barley,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-147,شعير مطحون,Ground Barley,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-148,زهره الربيع,Primrose Flower,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-149,زبد البحر,Cuttlebone,العناية والجمال,Beauty & Personal Care,,,,,,FALSE,,,,,,,,0
-150,كبريت عمود,Sulfur Sticks,بهارات,Spices,,,,,,TRUE,,200,400,800,1600,,,0
-151,ودع بحر,Cowrie Shells,العناية والجمال,Beauty & Personal Care,,,,,,FALSE,,,,,,,,0
-152,ورق جوافه,Guava Leaves,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-153,بذر شيا,Chia Seeds,بهارات,Spices,,,,,,TRUE,,60,120,240,480,,,0
-154,بذر قطونه,Psyllium Seeds,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-155,ورق لورو,Bay Leaves,بهارات,Spices,,,,,,TRUE,,30,60,120,240,,,0
-156,بذر ملوخيه,Molokhia Seeds,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-157,فاصوليا,Beans,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-158,رز بلدي,Egyptian Rice,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-159,فشار,Popcorn Kernels,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-160,عدس اصفر,Yellow Lentils,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-161,عدس بجبه,Brown Lentils,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-162,فول,Fava Beans,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-163,ترمس حلو,Sweet Lupin,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-164,حمص,Chickpeas,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-165,أرز بسمتي,Basmati Rice,بهارات,Spices,,,,,,TRUE,,11.25,22.5,45,90,,,0
-166,أرز بسمتي,Basmati Rice,بهارات,Spices,,,,,,TRUE,,8.75,17.5,35,70,,,0
-167,قمح مبشور,Cracked Wheat,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-168,فريك,Freekeh,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-169,رز جوهره,Gawhara Rice,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-170,سكر ناعم,Fine Sugar,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-171,جيلاتينا بودره,Gelatin Powder,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-172,لوبيا,Black-Eyed Peas,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-173,نشا,Cornstarch,بهارات,Spices,,,,,,TRUE,,7.5,15,30,60,,,0
-174,حلتيت,Asafoetida,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-175,مرمريه مسح,Cleaned Sage,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-176,فنكوش,Fankoush,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-177,بقسماط,Breadcrumbs,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-178,فيحتار حار,Hot Vegetar Seasoning,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-179,فيجتار,Vegetar Seasoning,بهارات,Spices,,,,,,TRUE,,15,30,60,120,,,0
-180,دقيق,Flour,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-181,زيت,Oil,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-182,زيت,Oil,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-183,زيت,Oil,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-184,زيت,Oil,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-185,زيت,Oil,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-186,زيت,Oil,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-187,زيت,Oil,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-188,زيت,Oil,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-189,زيت,Oil,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-190,زيت,Oil,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-191,زيت,Oil,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-192,زيت,Oil,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-193,زيت,Oil,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-194,زيت,Oil,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-195,زيت,Oil,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-196,زيت,Oil,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-197,زيت,Oil,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-198,زيت,Oil,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-199,زيت,Oil,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-200,زيت,Oil,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-201,زيت,Oil,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-202,زيت,Oil,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-203,زيت,Oil,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-204,زيت,Oil,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-205,زيت,Oil,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-206,كرسبي,Crispy Seasoning,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-207,ملح ليمون,Citric Acid,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-208,فورماسيل شكولاته,Chocolate Sprinkles,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-209,قاطونه,Psyllium Husk,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-210,جبنه,Cheese Powder,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-211,كركم حصا,Whole Turmeric,بهارات,Spices,,,,,,TRUE,,60,120,240,480,,,0
-212,قرفه خشب,Cinnamon Bark,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-213,بروست,Broast Spice Blend,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-214,بابريكا مدخنه,Smoked Paprika,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-215,بهرات لحمه,Meat Spice Blend,بهارات,Spices,,,,,,TRUE,,60,120,240,480,,,0
-216,تخسيس,Slimming Herbal Blend,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-217,جينسنج,Ginseng,بهارات,Spices,,,,,,TRUE,,1250,2500,5000,10000,,,0
-218,خرشوف,Artichoke,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-219,خلنجان,Galangal,بهارات,Spices,,,,,,TRUE,,100,200,400,800,,,0
-220,ناردين,Valerian Root,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-221,لافندر,Lavender,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-222,شله ناعمه,Fine Shilla,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-223,بصل شرايح,Onion Flakes,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-224,شوك جمل,Milk Thistle,بهارات,Spices,,,,,,TRUE,,150,300,600,1200,,,0
-225,قرنفل,Cloves,بهارات,Spices,,,,,,TRUE,,125,250,500,1000,,,0
-226,زر ورد,Rose Buds,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-227,كاجو,Cashews,مكسرات,Nuts,,,,,,TRUE,,120,240,480,960,,,0
-228,حنه,Henna,العناية والجمال,Beauty & Personal Care,,,,,,TRUE,,30,60,120,240,,,0
-229,سليوم,Psyllium,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-230,كركديه,Hibiscus,بهارات,Spices,,,,,,TRUE,,40,80,160,320,,,0
-231,مقوي عام,General Tonic Blend,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-232,خروب,Carob,بهارات,Spices,,,,,,TRUE,,40,80,160,320,,,0
-233,لبان دكر بخور,Frankincense Incense,بخور,Incense,,,,,,FALSE,,,,,,,,0
-234,فول مجروش,Split Fava Beans,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-235,عين جمل,Walnuts,مكسرات,Nuts,,,,,,TRUE,,90,180,360,720,,,0
-236,لوز ني,Raw Almonds,مكسرات,Nuts,,,,,,TRUE,,90,180,360,720,,,0
-237,سوداني,Peanuts,مكسرات,Nuts,,,,,,FALSE,,,,,,,,0
-238,فول صويا مجروش,Crushed Soybeans,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-239,لب قرع,Pumpkin Seeds,مكسرات,Nuts,,,,,,FALSE,,,,,,,,0
-240,مكرونه,Pasta,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-241,شكولاته شيبس,Chocolate Chips,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-242,كريم شانتيه,Chantilly Cream Powder,بهارات,Spices,,,,,,TRUE,,40,80,160,320,,,0
-243,سكر بورده,Powdered Sugar,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-244,فواكه ألوان,Mixed Candied Fruit,مكسرات,Nuts,,,,,,FALSE,,,,,,,,0
-245,جنين قمح,Wheat Germ,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-246,زبيب,Raisins,مكسرات,Nuts,,,,,,TRUE,,40,80,160,320,,,0
-247,جوزهند,Coconut,مكسرات,Nuts,,,,,,TRUE,,40,80,160,320,,,0
-248,قراصيا,Prunes,مكسرات,Nuts,,,,,,TRUE,,60,120,240,480,,,0
-249,جيلاتين,Gelatin,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-250,برغل,Bulgur,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-251,زهره البنفسج,Violet Flowers,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-252,فنكوش,Fankoush,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-253,دقه زعتر,Za'atar Dukkah Blend,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-254,القديسين,St. John's Wort,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-255,بسبوسه,Basbousa Mix,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-256,زيت,Oil,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-257,زيت,Oil,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-258,زيت,Oil,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-259,بن اخضر,Green Coffee Beans,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-260,جوزه,Joza,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-261,بابونج,Chamomile,بهارات,Spices,,,,,,TRUE,,60,120,240,480,,,0
-262,بودره زعفران,Saffron Powder,بهارات,Spices,,,,,,TRUE,,500,1000,2000,4000,,,0
-263,بلح سايب,Loose Dates,مكسرات,Nuts,,,,,,TRUE,,20,40,80,160,,,0
-264,ملوخيه,Molokhia,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-265,بهرات سجق,Sausage Spice Blend,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-266,برجر,Burger Seasoning,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-267,ديميجلاس,Demi-Glace,بهارات,Spices,,,,,,TRUE,,60,120,240,480,,,0
-268,كفته,Kofta Spice Blend,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-269,ملح خشن,Coarse Salt,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-270,ملبن,Turkish Delight,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-271,ا,A,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-272,بلح رطب,Fresh Dates,مكسرات,Nuts,,,,,,FALSE,,,,,,,,0
-273,ب,B,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-274,تمر هندي,Tamarind,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-275,كريمه,Cream Powder,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-276,بلح مفتل,Maftal Dates,مكسرات,Nuts,,,,,,FALSE,,,,,,,,0
-277,فريك,Freekeh,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-278,مشاط,Mashat Hair Herb,العناية والجمال,Beauty & Personal Care,,,,,,FALSE,,,,,,,,0
-279,كورن فليكس,Corn Flakes,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-280,زبده شيا,Shea Butter,العناية والجمال,Beauty & Personal Care,,,,,,FALSE,,,,,,,,0
-281,فازلين,Petroleum Jelly,العناية والجمال,Beauty & Personal Care,,,,,,FALSE,,,,,,,,0
-282,ترمس بلدي,Egyptian Lupin,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-283,أرز مطحون,Rice Flour,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-284,حمص كبير,Large Chickpeas,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-285,بندق,Hazelnuts,مكسرات,Nuts,,,,,,TRUE,,150,300,600,1200,,,0
-286,بذر فجل,Radish Seeds,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-287,البربرين,Berberine,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-288,شرش زلوع,Zallouh Root,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-289,حسك,Tribulus,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-290,بذر شوكه الجمل,Milk Thistle Seeds,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-291,حنزبيل فريش,Fresh Ginger,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-292,زياده وزن,Weight Gain Blend,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-293,دقيق اصفر,Yellow Flour,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-294,دقيق اسود,Black Flour,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-295,حنه فرد,Hair Straightening Henna,العناية والجمال,Beauty & Personal Care,,,,,,FALSE,,,,,,,,0
-296,شكولاته خام,Baking Chocolate,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-297,مشمشيه,Dried Apricots,مكسرات,Nuts,,,,,,TRUE,,100,200,400,800,,,0
-298,كريز احمر,Red Cherries,مكسرات,Nuts,,,,,,FALSE,,,,,,,,0
-299,كريز اخضر,Green Cherries,مكسرات,Nuts,,,,,,FALSE,,,,,,,,0
-300,لبن سكيمد,Skimmed Milk Powder,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-301,خروب,Carob,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-302,نواه مشمش,Apricot Kernels,مكسرات,Nuts,,,,,,FALSE,,,,,,,,0
-303,عصفر,Safflower,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-304,زعفران صحيح,Whole Saffron,بهارات,Spices,,,,,,TRUE,,3750,7500,15000,30000,,,0
-305,دقيق اسمر,Whole Wheat Flour,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-306,عشبه القديسه,St. John's Wort,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-307,استيفيا,Stevia,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-308,فول صويا صحيح,Whole Soybeans,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-309,صدف بحري,Sea Shells,العناية والجمال,Beauty & Personal Care,,,,,,FALSE,,,,,,,,0
-310,كف مريم,Kaff Maryam,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-311,صويا مجروش,Crushed Soybeans,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-312,بلكم,Balkam,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-313,فلاريس,Phalaris,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-314,ورق صفصاف,Willow Leaves,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-315,حب ملوك,Croton Seeds,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-316,جوزهند ظفر,Coconut Zafar,مكسرات,Nuts,,,,,,FALSE,,,,,,,,0
-317,برز جزر,Carrot Seeds,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-318,املج,Amla,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-319,بزر جزر,Carrot Seeds,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-320,طلح نخل,Palm Pollen,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-321,حبوب لقاح,Bee Pollen,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-322,عرعر,Juniper Berries,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-323,سم نحل,Bee Venom,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-324,نشادر,Ammonium Chloride,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-325,دقيق اسمر,Whole Wheat Flour,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-326,رجل اسد,Lady's Mantle,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-327,قرطاس اللوز,Almond Shells,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-328,شمع برافين,Paraffin Wax,العناية والجمال,Beauty & Personal Care,,,,,,FALSE,,,,,,,,0
-329,شمع عسل,Beeswax,العناية والجمال,Beauty & Personal Care,,,,,,FALSE,,,,,,,,0
-330,عفص,Oak Galls,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-331,بزر برسيم,Clover Seeds,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-332,فانليا,Vanilla,بهارات,Spices,,,,,,TRUE,,375,750,1500,3000,,,0
-333,عصير,Juice Powder,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-334,سحلب,Sahlab,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-335,مكسرات مشكله,Mixed Nuts,مكسرات,Nuts,,,,,,FALSE,,,,,,,,0
-336,فسدق,Pistachios,مكسرات,Nuts,,,,,,TRUE,,120,240,480,960,,,0
-337,كامينا,Kamina,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-338,كام,Kam,بهارات,Spices,,,,,,FALSE,,,,,,,,0
-339,لون بني,Brown Food Coloring,بهارات,Spices,,,,,,FALSE,,,,,,,,0
+﻿id,name,name_eng,category,category_eng,description,description_eng,tag,tag_eng,image,active,featured_order,price_125,price_250,price_500,price_1000,price_shaker,price_unit,discount,is_powder
+1,كمون,Cumin,بهارات,Spices,,,,,assets/1.webp,TRUE,3,50,90,180,360,45,,10,TRUE
+2,بذر رجله,Purslane Seeds,بهارات,Spices,,,,,assets/2.webp,TRUE,,50,80,160,320,,,0,FALSE
+3,فلفل,Black Pepper,بهارات,Spices,,,,,assets/3.webp,TRUE,2,70,120,240,480,60,,10,TRUE
+4,دوم,Doum Palm,اعشاب وزيوت طبيعية,Organic Herbs & Oils,,,1,,assets/4.webp,TRUE,,40,60,120,240,,,0,FALSE
+5,كزبره,Coriander,بهارات,Spices,,,,,assets/5.webp,TRUE,,30,40,80,160,,,0,TRUE
+6,شطه مطحونه,Ground Chili,بهارات,Spices,,,2,,assets/6.webp,TRUE,,40,60,120,240,30,,0,FALSE
+7,شطه قرون,Whole Chili Peppers,بهارات,Spices,,,3,,assets/7.webp,TRUE,,40,60,120,240,,,0,FALSE
+8,بهرات ٧,Seven Spice Blend,بهارات,Spices,,,,,assets/8.webp,TRUE,,70,120,240,480,55,,0,FALSE
+9,بهرات فراخ,Chicken Spice Blend,بهارات,Spices,,,,,assets/9.webp,TRUE,,70,120,240,480,55,,0,FALSE
+10,بهرات سمك,Fish Spice Blend,بهارات,Spices,,,,,assets/10.webp,TRUE,,70,120,240,480,,,0,FALSE
+11,بهرات كبسه,Kabsa Spice Blend,بهارات,Spices,,,,,assets/11.webp,TRUE,,70,120,240,480,,,0,FALSE
+12,بهرات حواوشي,Hawawshi Spice Blend,بهارات,Spices,,,,,assets/12.webp,TRUE,,70,120,240,480,,,0,FALSE
+13,كاري,Curry Powder,بهارات,Spices,,,,,assets/13.webp,TRUE,,65,120,240,480,60,,0,TRUE
+14,كبابه صيني,Cubeb Pepper,بهارات,Spices,,,,,assets/14.webp,TRUE,,120,200,400,800,,,0,FALSE
+15,حبهان,Cardamom,بهارات,Spices,,,,,assets/15.webp,TRUE,,350,700,1400,2800,,,0,TRUE
+16,مرقه لحمه,Beef Stock Powder,بهارات,Spices,,,,,assets/16.webp,TRUE,,70,100,180,320,50,,0,FALSE
+17,مرقه فراخ,Chicken Stock Powder,بهارات,Spices,,,,,assets/17.webp,TRUE,,70,100,180,320,50,,0,FALSE
+18,شرق اقصه,Far East Spice Blend,بهارات,Spices,,,,,assets/18.webp,TRUE,,70,120,240,480,,,0,FALSE
+19,محشي,Mahshi Spice Blend,بهارات,Spices,,,,,assets/19.webp,TRUE,,70,120,240,480,,,0,FALSE
+20,جوزه طيب,Nutmeg,بهارات,Spices,,,,,assets/20.webp,TRUE,,250,450,900,1800,,10,0,TRUE
+21,قرفه مطحون,Ground Cinnamon,بهارات,Spices,,,,,assets/21.webp,TRUE,,70,120,240,480,45,,0,FALSE
+22,قرفه سيجار,Cinnamon Sticks,بهارات,Spices,,,,,assets/22.webp,TRUE,,70,120,240,480,,,0,FALSE
+23,شطه خشنه,Crushed Chili,بهارات,Spices,,,,,assets/23.webp,TRUE,,70,120,240,480,,,0,FALSE
+24,مقوي عام,General Tonic Blend,اعشاب وزيوت طبيعية,Organic Herbs & Oils,,,,,,FALSE,,,,,,,,0,FALSE
+25,أعشاب سكر,Diabetes Herbal Blend,اعشاب وزيوت طبيعية,Organic Herbs & Oils,,,,,,FALSE,,187.5,375,750,1500,,,0,FALSE
+26,أعشاب أملاح,Salt Balance Herbal Blend,اعشاب وزيوت طبيعية,Organic Herbs & Oils,,,,,,FALSE,,187.5,375,750,1500,,,0,FALSE
+27,أعشاب قولون,Colon Herbal Blend,اعشاب وزيوت طبيعية,Organic Herbs & Oils,,,,,,FALSE,,187.5,375,750,1500,,,0,FALSE
+28,أعشاب كحه,Cough Herbal Blend,اعشاب وزيوت طبيعية,Organic Herbs & Oils,,,,,,FALSE,,,,,,,,0,FALSE
+29,بصل,Onion Powder,بهارات,Spices,,,,,assets/29.webp,TRUE,,50,80,120,240,45,,0,FALSE
+30,ثوم,Garlic Powder,بهارات,Spices,,,,,assets/30.webp,TRUE,,50,80,120,240,40,,0,FALSE
+31,جنزبيل,Ginger,بهارات,Spices,,,,,assets/31.webp,TRUE,,70,140,240,480,40,,0,TRUE
+32,فلفل ابيض,White Pepper,بهارات,Spices,,,,,assets/32.webp,TRUE,,120,175,300,600,100,,0,TRUE
+33,كراويه,Caraway,اعشاب وزيوت طبيعية,Organic Herbs & Oils,,,,,assets/33.webp,TRUE,,40,60,120,240,,,0,FALSE
+34,ينسون نجوم,Star Anise,اعشاب وزيوت طبيعية,Organic Herbs & Oils,,,,,assets/34.webp,TRUE,,120,200,400,800,,,0,FALSE
+35,لمون اسود,Dried Black Lime,بهارات,Spices,,,,,assets/35.webp,TRUE,,40,60,120,240,,,0,FALSE
+36,شمر,Fennel,اعشاب وزيوت طبيعية,Organic Herbs & Oils,,,,,assets/36.webp,TRUE,,40,60,120,240,,,0,FALSE
+37,روزماري,Rosemary,اعشاب وزيوت طبيعية,Organic Herbs & Oils,,,,,assets/37.webp,TRUE,,40,60,120,240,,,0,FALSE
+38,زعتر,Thyme,بهارات,Spices,,,,,assets/38.webp,TRUE,,50,80,160,320,,,0,FALSE
+39,ملح صيني,Monosodium Glutamate,بهارات,Spices,,,,,assets/39.webp,TRUE,,30,40,80,160,,,0,FALSE
+40,كربناتو,Bicarbonate,بهارات,Spices,,,,,assets/40.webp,TRUE,,30,40,80,160,,,0,FALSE
+41,بابريكا,Paprika,بهارات,Spices,,,,,assets/41.webp,TRUE,,50,80,160,320,,,0,FALSE
+42,سمسم محمص,Roasted Sesame,بهارات,Spices,,,,,assets/42.webp,TRUE,,30,40,80,160,,,0,FALSE
+43,سمسم ابيض,White Sesame,بهارات,Spices,,,,,assets/43.webp,TRUE,,30,40,80,160,,,0,FALSE
+44,شوفان,Oats,بهارات,Spices,,,,,assets/44.webp,TRUE,,20,30,60,120,,,0,FALSE
+45,شفان ناعم,Fine Oats,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+46,شعير ناعم,Fine Barley,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+47,مغات,Moghat,بهارات,Spices,,,,,assets/47.webp,TRUE,,120,200,400,800,,,0,FALSE
+48,كاكاو,Cocoa Powder,بهارات,Spices,,,,,assets/48.webp,TRUE,,100,160,320,640,,,0,FALSE
+49,لبن,Milk Powder,بهارات,Spices,,,,,assets/49.webp,TRUE,,50,80,160,320,,,0,FALSE
+50,خميره,Yeast,بهارات,Spices,,,,,assets/50.webp,TRUE,,85,150,300,600,,,0,FALSE
+51,محلب ابيض,White Mahlab,بهارات,Spices,,,,,assets/51.webp,TRUE,,280,500,1000,2000,,,0,FALSE
+52,أقحوان,Chrysanthemum,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+53,تين فيل,Elephant Fig,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+54,شاي اخضر,Green Tea,بهارات,Spices,,,,,assets/54.webp,TRUE,,70,120,240,480,,,0,FALSE
+55,عود صليبه,Oud Saliba,بهارات,Spices,,,,,,TRUE,,550,1000,2000,4000,,,0,FALSE
+56,سوبيا,Sobia Mix,بهارات,Spices,,,,,assets/56.webp,TRUE,,40,60,120,240,,,0,FALSE
+57,هندباء,Chicory,اعشاب وزيوت طبيعية,Organic Herbs & Oils,,,,,assets/57.webp,FALSE,,,,,,,,0,FALSE
+58,عرض الملاحات السوبر,Shakers Super Bundle,بهارات,Spices,"20 ملاحه
+فلفل ,كمون ,كزبرة ,فلفل ابيض ,كاري, كركم ,7بهرات ,بهرات لحمه ,بهرات فراخ, ديمي جلاس ,بصل بودر ,ثوم بودر ,مرقة لحمه ,مرقه فراخ ,بابريكا مدخنه ,روز ماري ,سماق ,قرفه, جنزبيل ,شطة","20 Shakers
+Black pepper , cumin , coriander , white pepper , curry powder , turmeric , seven spices , meat seasoning, chicken seasoning, Demi glace, onion powder, garlic powder, beef stock , chicken stock , smoked paprika, Rosemary , Sumac , cinnamon, ginger, chili powder",,,assets/58.webp,TRUE,1,,,,,900,,20,FALSE
+59,يذر رجله,Purslane Seeds,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+60,خله بلدي,Khella Seeds,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+61,ذيل حصان,Horsetail,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+62,جينكا,Ginkgo,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+63,بلح كابلي,Kabli Dates,اعشاب وزيوت طبيعية,Organic Herbs & Oils,,,,,assets/63.webp,TRUE,,550,1000,2000,4000,,,0,FALSE
+64,بخور 5 ساعات عود خيال,5h Oudh khayal,بخور,Incense,,,,,assets/64.webp,TRUE,,,,,,,120,0,FALSE
+65,بخور 5 ساعات ارابيكا مسك,5h Arabica musk,بخور,Incense,,,,,assets/65.webp,TRUE,,,,,,,120,0,FALSE
+66,بخور 5 ساعات مسك جنات عدن,5h Ganat adan,بخور,Incense,,,,,assets/66.webp,TRUE,,,,,,,120,0,FALSE
+67,بخور 5 ساعات صندل,5h Sandal,بخور,Incense,,,,,assets/67.webp,TRUE,,,,,,,120,0,FALSE
+68,ملح هيملايا,Himalayan Salt,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+69,بخور 5 ساعات لمسه العود,5h Oudh touch me,بخور,Incense,,,,,assets/69.webp,TRUE,,,,,,,120,0,FALSE
+70,بخور 5 ساعات دهن العود,5h Ageer Wood,بخور,Incense,,,,,assets/70.webp,TRUE,,,,,,,120,0,FALSE
+71,قاطونه,Psyllium Husk,اعشاب وزيوت طبيعية,Organic Herbs & Oils,,,,,assets/71.webp,TRUE,,85,150,300,600,,,0,FALSE
+72,قشور سليم,Salim Bark,اعشاب وزيوت طبيعية,Organic Herbs & Oils,,,,,assets/72.webp,TRUE,,120,200,400,800,,,0,FALSE
+73,حجر قدس,Jerusalem Stone,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+74,جحر,Jahr Herb,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+75,ينسون بلدي,Anise Seeds,بهارات,Spices,,,,,assets/75.webp,TRUE,,40,60,120,240,,,0,FALSE
+76,حلبه حصا,Whole Fenugreek,بهارات,Spices,,,,,assets/76.webp,TRUE,,15,20,40,80,,,0,FALSE
+77,حلبه مطحونه,Ground Fenugreek,بهارات,Spices,,,,,assets/77.webp,TRUE,,40,60,120,240,,,0,FALSE
+78,عرقسوس,Licorice,بهارات,Spices,,,,,assets/78.webp,FALSE,,,,,,,,0,FALSE
+79,كتان,Flaxseed,اعشاب وزيوت طبيعية,Organic Herbs & Oils,,,,,assets/79.webp,TRUE,,70,120,240,480,,,0,FALSE
+80,حب رشاد,Garden Cress Seeds,اعشاب وزيوت طبيعية,Organic Herbs & Oils,,,,,assets/80.webp,TRUE,,70,120,240,480,,,0,FALSE
+81,بخور 3 ساعات عود خيال,3h Oudh khayal,بخور,Incense,,,,,assets/81.webp,TRUE,,,,,,,80,0,FALSE
+82,بخور 3 ساعات ارابيكا مسك,3h Arabica musk,بخور,Incense,,,,,assets/82.webp,TRUE,,,,,,,80,0,FALSE
+83,بخور 3 ساعات صندل,3h Sandal,بخور,Incense,,,,,assets/83.webp,TRUE,,,,,,,80,0,FALSE
+84,بخور 3 ساعات لمسه العود,3h Oudh touch me,بخور,Incense,,,,,assets/84.webp,TRUE,,,,,,,80,0,FALSE
+85,شبت,Dill,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+86,هند شعير,Hind Shaeer,بهارات,Spices,,,,,assets/86.webp,TRUE,,180,300,600,1200,,,0,FALSE
+87,قرع عسل,Pumpkin,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+88,بخور 3 ساعات مسك جنات عدن,3h Ganat adan,بخور,Incense,,,,,assets/88.webp,TRUE,,,,,,,80,0,FALSE
+89,صمغ عربي صحيح,Whole Gum Arabic,اعشاب وزيوت طبيعية,Organic Herbs & Oils,,,,,assets/89.webp,TRUE,,120,200,400,800,,,0,FALSE
+90,صمغ عربي مطحون,Ground Gum Arabic,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+91,مرايه عفريت,Mirayat Afreet,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+92,شبه حصا,Alum Crystals,العناية والجمال,Beauty & Personal Care,,,,,assets/92.webp,TRUE,,40,60,120,240,,,0,FALSE
+93,سماق,Sumac,بهارات,Spices,,,,,assets/93.webp,TRUE,,120,200,400,800,50,,0,TRUE
+94,حلبه محوجه,Spiced Fenugreek,بهارات,Spices,,,,,assets/94.webp,TRUE,,40,60,120,240,,,0,FALSE
+95,فول صويا,Soybeans,بهارات,Spices,,,,,assets/95.webp,FALSE,,,,,,,,0,FALSE
+96,حنه بيضاء,White Henna,العناية والجمال,Beauty & Personal Care,,,,,assets/96.webp,TRUE,,120,200,400,800,,,0,FALSE
+97,حبه بركه,Nigella Seeds,اعشاب وزيوت طبيعية,Organic Herbs & Oils,,,,,assets/97.webp,TRUE,,75,120,240,480,,,0,FALSE
+98,بردقوش,Marjoram,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+99,زنجبيل ناعم,Fine Ground Ginger,بهارات,Spices,,,,,assets/99.webp,FALSE,,75,120,240,480,,,0,FALSE
+100,شوفان حراز,Haraz Oats,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+101,دقيق شوفان,Oat Flour,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+102,حلتيت,Asafoetida,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+103,مر بطارخ,Mur Batarikh,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+104,ورق سدر,Sidr Leaves,اعشاب وزيوت طبيعية,Organic Herbs & Oils,,,,,assets/104.webp,TRUE,,50,80,160,320,,,0,FALSE
+105,روز ماري صحيح,Whole Rosemary,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+106,زعتر مصري,Egyptian Thyme,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+107,مستكه,Mastic,بهارات,Spices,تبداء من 10 جرام,starts from 10gm,,,assets/107.webp,TRUE,,2800,5000,10000,20000,,200,0,FALSE
+108,عين عفريت,Ain Afreet,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+109,قرض ناعم,Ground Acacia Pods,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+110,قسط هندي ناعم,Ground Indian Costus,بهارات,Spices,,,,,assets/110.webp,TRUE,,120,200,400,800,,,0,FALSE
+111,قسط هندي حصا,Whole Indian Costus,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+112,راوند ناعم,Ground Rhubarb Root,اعشاب وزيوت طبيعية,Organic Herbs & Oils,,,,,assets/112.webp,TRUE,,120,200,400,800,,,0,FALSE
+113,طمي مغربي,Moroccan Clay,العناية والجمال,Beauty & Personal Care,,,,,assets/113.webp,TRUE,,120,200,400,800,,,0,FALSE
+114,ترمس ناعم,Ground Lupin,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+115,قشر رمان ناعم,Ground Pomegranate Peel,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+116,قشر رمان حصا,Whole Pomegranate Peel,بهارات,Spices,,,,,assets/116.webp,TRUE,,75,120,240,480,,,0,FALSE
+117,ريحان مجروش,Crushed Basil,بهارات,Spices,,,,,assets/117.webp,TRUE,,75,120,240,480,,,0,FALSE
+118,نعناع بلدي مجروش,Crushed Egyptian Mint,اعشاب وزيوت طبيعية,Organic Herbs & Oils,,,,,assets/118.webp,TRUE,,40,60,120,240,,,0,FALSE
+119,ورق قراص,Nettle Leaves,بهارات,Spices,,,,,assets/119.webp,TRUE,,75,120,240,480,,,0,FALSE
+120,بيكربنات صوديوم,Sodium Bicarbonate,بهارات,Spices,,,,,assets/120.webp,TRUE,,25,40,80,160,,,0,FALSE
+121,لبان دكر,Frankincense,بخور,Incense,,,,,assets/121.webp,TRUE,,150,250,500,1000,,,0,FALSE
+122,سموه مغربله,Samoa Maghrabala,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+123,زهره العايق,Larkspur Flower,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+124,حرجل,Hargal Herb,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+125,بزر حرمل,Syrian Rue Seeds,اعشاب وزيوت طبيعية,Organic Herbs & Oils,,,,,assets/125.webp,TRUE,,120,200,400,800,,,0,FALSE
+126,بذر خردل,Mustard Seeds,بهارات,Spices,,,,,assets/126.webp,TRUE,,75,120,240,480,,,0,FALSE
+127,مورينجا,Moringa,بهارات,Spices,,,,,assets/127.webp,TRUE,,75,120,240,480,,,0,FALSE
+128,مورينجا,Moringa,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+129,حشيشه الملائكيه,Angelica Herb,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+130,حشيشه الدينار,Hops,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+131,اشوجاندا حصا,Whole Ashwagandha,اعشاب وزيوت طبيعية,Organic Herbs & Oils,,,,,assets/131.webp,TRUE,,180,300,600,1200,,,0,FALSE
+132,طقم الملحات الصغير,Shakers Mini Bundle,بهارات,Spices,"5 ملاحه
+فلفل ، كمون ، كزبرة، شطة ، فلفل ابيض","5 Shakers
+Black pepper , cumin , coriander, chili powder, white pepper",,,assets/132.webp,TRUE,4,,,,,225,,10,FALSE
+133,مليشيا,Melissa Herb,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+134,شيخ بلدي,Egyptian Wormwood,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+135,قرض حصا,Whole Acacia Pods,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+136,سنامكه ورق,Senna Leaves,اعشاب وزيوت طبيعية,Organic Herbs & Oils,,,,,assets/136.webp,TRUE,,120,200,400,800,,,0,FALSE
+137,سنامكه قرون,Senna Pods,اعشاب وزيوت طبيعية,Organic Herbs & Oils,,,,,assets/137.webp,TRUE,,120,200,400,800,,,0,FALSE
+138,مرمريه ورق,Sage Leaves,اعشاب وزيوت طبيعية,Organic Herbs & Oils,,,,,assets/138.webp,TRUE,,75,120,240,480,,,0,FALSE
+139,رجل اسد,Lady's Mantle,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+140,ينسون نجوم,Star Anise,اعشاب وزيوت طبيعية,Organic Herbs & Oils,,,,,assets/140.webp,FALSE,,120,200,400,800,,,0,FALSE
+141,ورق زيتون,Olive Leaves,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+142,ورق تين,Fig Leaves,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+143,ورق توت,Mulberry Leaves,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+144,زعرور,Hawthorn,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+145,حلفا بر,Halfa Bar Herb,اعشاب وزيوت طبيعية,Organic Herbs & Oils,,,,,assets/145.webp,TRUE,,120,200,400,800,,,0,FALSE
+146,شعير,Barley,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+147,شعير مطحون,Ground Barley,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+148,زهره الربيع,Primrose Flower,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+149,زبد البحر,Cuttlebone,العناية والجمال,Beauty & Personal Care,,,,,,FALSE,,,,,,,,0,FALSE
+150,كبريت عمود,Sulfur Sticks,بهارات,Spices,,,,,assets/150.webp,TRUE,,250,400,800,1600,,,0,FALSE
+151,ودع بحر,Cowrie Shells,العناية والجمال,Beauty & Personal Care,,,,,,FALSE,,,,,,,,0,FALSE
+152,ورق جوافه,Guava Leaves,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+153,بذر شيا,Chia Seeds,اعشاب وزيوت طبيعية,Organic Herbs & Oils,,,,,assets/153.webp,TRUE,,75,120,240,480,,,0,FALSE
+154,بذر قطونه,Psyllium Seeds,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+155,ورق لورو,Bay Leaves,بهارات,Spices,,,,,assets/155.webp,TRUE,,40,60,120,240,,,0,FALSE
+156,بذر ملوخيه,Molokhia Seeds,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+157,فاصوليا,Beans,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+158,رز بلدي,Egyptian Rice,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+159,فشار,Popcorn Kernels,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+160,عدس اصفر,Yellow Lentils,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+161,عدس بجبه,Brown Lentils,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+162,فول,Fava Beans,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+163,ترمس حلو,Sweet Lupin,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+164,حمص,Chickpeas,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+165,أرز بسمتي,Basmati Rice,بهارات,Spices,,,,,assets/165.webp,TRUE,,15,25,45,90,,,0,FALSE
+166,أرز بسمتي,Basmati Rice,بهارات,Spices,,,,,assets/166.webp,TRUE,,10,20,35,70,,,0,FALSE
+167,قمح مبشور,Cracked Wheat,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+168,فريك,Freekeh,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+169,رز جوهره,Gawhara Rice,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+170,سكر ناعم,Fine Sugar,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+171,جيلاتينا بودره,Gelatin Powder,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+172,لوبيا,Black-Eyed Peas,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+173,نشا,Cornstarch,بهارات,Spices,,,,,assets/173.webp,TRUE,,10,20,30,60,,,0,FALSE
+174,حلتيت,Asafoetida,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+175,مرمريه مسح,Cleaned Sage,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+176,فنكوش,Fankoush,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+177,بقسماط,Breadcrumbs,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+178,فيحتار حار,Hot Vegetar Seasoning,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+179,فيجتار,Vegetar Seasoning,بهارات,Spices,,,,,assets/179.webp,TRUE,,20,30,60,120,,,0,FALSE
+180,دقيق,Flour,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+181,سوراج زيت مجموعه,Hair Oil,العناية والجمال,Beauty & Personal Care,"زيت شعر و بشرة 
+خليط من 7 زيوت","Hair & Skin oil
+mix of 7 oils",,,assets/181.webp,TRUE,,,,,,,80,0,FALSE
+182,سوراج زيت تنعيم,Hair smoothing Oil,العناية والجمال,Beauty & Personal Care,زيت شعر و بشرة,Hair & Skin oil,,,assets/182.webp,TRUE,,,,,,,80,0,FALSE
+183,سوراج زيت جوزهند,Coconut Oil,العناية والجمال,Beauty & Personal Care,زيت شعر و بشرة,Hair & Skin oil,,,assets/183.webp,TRUE,,,,,,,80,0,FALSE
+184,سوراج زيت سمسم,Sesame Oil,العناية والجمال,Beauty & Personal Care,زيت شعر و بشرة,Hair & Skin oil,,,assets/184.webp,TRUE,,,,,,,80,0,FALSE
+185,سوراج زيت جرجير,Watercress Oil,العناية والجمال,Beauty & Personal Care,زيت شعر و بشرة,Hair & Skin oil,,,assets/185.webp,TRUE,,,,,,,80,0,FALSE
+186,سوراج زيت زيتون,Olive Oil,العناية والجمال,Beauty & Personal Care,زيت شعر و بشرة,Hair & Skin oil,,,assets/186.webp,TRUE,,,,,,,80,0,FALSE
+187,سوراج زيت لوز,Almond Oil,العناية والجمال,Beauty & Personal Care,زيت شعر و بشرة,Hair & Skin oil,,,assets/187.webp,TRUE,,,,,,,80,0,FALSE
+188,سوراج زيت عظام و مفاصل,Bone & Joints Oil,العناية والجمال,Beauty & Personal Care,زيت لعلاج الام العظام و المفاصل,Bone & Joints pain relief Oil,,,assets/188.webp,TRUE,,,,,,,150,0,FALSE
+189,سوراج زيت حبه بركه,Black Seed Oil,اعشاب وزيوت طبيعية,Organic Herbs & Oils,زيت طبيعي 100%,Natural oil,,,assets/189.webp,TRUE,,,,,,,150,0,FALSE
+190,سوراج زيت خروع,Castor Oil,اعشاب وزيوت طبيعية,Organic Herbs & Oils,زيت طبيعي 100%,Natural oil,,,assets/190.webp,TRUE,,,,,,,100,0,FALSE
+191,سوراج زيت روزماري,Rose Mary Oil,اعشاب وزيوت طبيعية,Organic Herbs & Oils,زيت طبيعي 100%,Natural oil,,,assets/191.webp,TRUE,,,,,,,100,0,FALSE
+192,زيت,Oil,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+193,زيت,Oil,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+194,زيت,Oil,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+195,زيت,Oil,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+196,زيت,Oil,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+197,زيت,Oil,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+198,زيت,Oil,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+199,زيت,Oil,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+200,زيت,Oil,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+201,زيت,Oil,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+202,زيت,Oil,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+203,زيت,Oil,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+204,زيت,Oil,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+205,زيت,Oil,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+206,كرسبي,Crispy Seasoning,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+207,ملح ليمون,Citric Acid,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+208,فورماسيل شكولاته,Chocolate Sprinkles,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+209,قاطونه,Psyllium Husk,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+210,جبنه,Cheese Powder,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+211,كركم,Turmeric,بهارات,Spices,,,,,assets/211.webp,TRUE,,85,140,240,480,60,,0,TRUE
+212,قرفه خشب,Cinnamon Bark,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+213,بروست,Broast Spice Blend,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+214,بابريكا مدخنه,Smoked Paprika,بهارات,Spices,,,,,assets/214.webp,TRUE,,75,100,200,380,50,,0,FALSE
+215,بهرات لحمه,Meat Spice Blend,بهارات,Spices,,,,,assets/215.webp,TRUE,,85,130,250,480,60,,0,FALSE
+216,تخسيس,Slimming Herbal Blend,العناية والجمال,Beauty & Personal Care,,,,,assets/216.webp,TRUE,,150,250,500,1000,,,0,FALSE
+217,جينسنج,Ginseng,اعشاب وزيوت طبيعية,Organic Herbs & Oils,,,,,assets/217.webp,TRUE,,1500,2500,5000,10000,,,0,FALSE
+218,خرشوف,Artichoke,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+219,خلنجان,Galangal,بهارات,Spices,,,,,assets/219.webp,TRUE,,120,200,400,800,,,0,TRUE
+220,ناردين,Valerian Root,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+221,لافندر,Lavender,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+222,شله ناعمه,Fine Shilla,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+223,بصل شرايح,Onion Flakes,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+224,شوك جمل,Milk Thistle,اعشاب وزيوت طبيعية,Organic Herbs & Oils,,,,,assets/224.webp,TRUE,,180,300,600,1200,,,0,FALSE
+225,قرنفل,Cloves,بهارات,Spices,,,,,assets/225.webp,TRUE,,150,250,500,1000,,,0,FALSE
+226,ورد محمدي,Damascene Rose,اعشاب وزيوت طبيعية,Organic Herbs & Oils,,,,,assets/226.webp,TRUE,,60,100,200,360,,,0,FALSE
+227,كاجو,Cashews,مكسرات,Nuts,,,,,assets/227.webp,TRUE,,150,240,480,960,,,0,FALSE
+228,حنه,Henna,العناية والجمال,Beauty & Personal Care,,,,,assets/228.webp,TRUE,,40,60,120,240,,,0,FALSE
+229,سليوم,Psyllium,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+230,كركديه,Hibiscus,بهارات,Spices,,,,,assets/230.webp,TRUE,,50,80,160,320,,,0,FALSE
+231,مقوي عام,General Tonic Blend,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+232,خروب مجروش,Carob,بهارات,Spices,,,,,assets/232.webp,TRUE,,50,80,160,320,,,0,FALSE
+233,لبان دكر بخور,Frankincense Incense,بخور,Incense,,,,,,FALSE,,,,,,,,0,FALSE
+234,فول مجروش,Split Fava Beans,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+235,عين جمل,Walnuts,مكسرات,Nuts,,,,,assets/235.webp,TRUE,,100,180,360,720,,,0,FALSE
+236,لوز,Almonds,مكسرات,Nuts,,,,,assets/236.webp,TRUE,,100,180,360,720,,,0,FALSE
+237,سوداني,Peanuts,مكسرات,Nuts,,,,,,FALSE,,,,,,,,0,FALSE
+238,فول صويا مجروش,Crushed Soybeans,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+239,لب قرع,Pumpkin Seeds,مكسرات,Nuts,,,,,,FALSE,,,,,,,,0,FALSE
+240,لوز مملح,Salted Almonds,بهارات,Spices,,,,,assets/240.webp,TRUE,,120,200,380,750,,,0,FALSE
+241,شكولاته شيبس,Chocolate Chips,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+242,كريم شانتيه,Chantilly Cream Powder,بهارات,Spices,,,,,assets/242.webp,TRUE,,50,80,160,320,,,0,FALSE
+243,سكر بورده,Powdered Sugar,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+244,فواكه ألوان,Mixed Candied Fruit,مكسرات,Nuts,,,,,,FALSE,,,,,,,,0,FALSE
+245,جنين قمح,Wheat Germ,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+246,زبيب,Raisins,مكسرات,Nuts,,,,,assets/246.webp,TRUE,,50,80,160,320,,,0,FALSE
+247,جوزهند,Coconut,مكسرات,Nuts,,,,,assets/247.webp,TRUE,,50,80,160,320,,,0,FALSE
+248,قراصيا,Prunes,مكسرات,Nuts,,,,,assets/248.webp,TRUE,,75,120,240,480,,,0,FALSE
+249,جيلاتين,Gelatin,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+250,برغل,Bulgur,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+251,زهره البنفسج,Violet Flowers,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+252,فنكوش,Fankoush,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+253,دقه زعتر,Za'atar Dukkah Blend,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+254,القديسين,St. John's Wort,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+255,بسبوسه,Basbousa Mix,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+256,زيت,Oil,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+257,زيت,Oil,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+258,زيت,Oil,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+259,بن اخضر,Green Coffee Beans,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+260,جوزه,Joza,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+261,بابونج,Chamomile,اعشاب وزيوت طبيعية,Organic Herbs & Oils,,,,,assets/261.webp,TRUE,,75,120,240,480,,,0,FALSE
+262,بودره زعفران,Saffron Powder,بهارات,Spices,,,,,assets/262.webp,TRUE,,550,1000,2000,4000,,,0,FALSE
+263,بلح سايب,Loose Dates,مكسرات,Nuts,,,,,assets/263.webp,TRUE,,30,40,80,160,,,0,FALSE
+264,ملوخيه,Molokhia,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+265,بهرات سجق,Sausage Spice Blend,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+266,برجر,Burger Seasoning,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+267,ديميجلاس,Demi-Glace,بهارات,Spices,,,,,assets/267.webp,TRUE,,75,140,250,480,70,,0,FALSE
+268,كفته,Kofta Spice Blend,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+269,ملح خشن,Coarse Salt,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+270,ملبن,Turkish Delight,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+271,ا,A,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+272,بلح رطب,Fresh Dates,مكسرات,Nuts,,,,,,FALSE,,,,,,,,0,FALSE
+273,ب,B,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+274,تمر هندي,Tamarind,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+275,كريمه,Cream Powder,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+276,بلح مفتل,Maftal Dates,مكسرات,Nuts,,,,,,FALSE,,,,,,,,0,FALSE
+277,فريك,Freekeh,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+278,طقم الملحات,Shakers Bundle,بهارات,Spices,"10 ملاحه
+فلفل ، كمون ، كزبرة، شطة ، فلفل ابيض ، 7 بهرات ، بابريكا مدخنه ، بصل بودر ، جنزبيل ، ثوم بودر","10 Shakers
+Black pepper , cumin , coriander, chili powder, white pepper, seven spices , smoked paprika, onion powder, garlic powder, ginger",,,assets/278.webp,TRUE,5,,,,,500,,15,FALSE
+279,كورن فليكس,Corn Flakes,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+280,زبده شيا,Shea Butter,العناية والجمال,Beauty & Personal Care,,,,,,FALSE,,,,,,,,0,FALSE
+281,فازلين,Petroleum Jelly,العناية والجمال,Beauty & Personal Care,,,,,,FALSE,,,,,,,,0,FALSE
+282,ترمس بلدي,Egyptian Lupin,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+283,أرز مطحون,Rice Flour,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+284,حمص كبير,Large Chickpeas,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+285,بندق,Hazelnuts,مكسرات,Nuts,,,,,assets/285.webp,TRUE,,180,300,600,1200,,,0,FALSE
+286,بذر فجل,Radish Seeds,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+287,البربرين,Berberine,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+288,شرش زلوع,Zallouh Root,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+289,حسك,Tribulus,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+290,بذر شوكه الجمل,Milk Thistle Seeds,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+291,حنزبيل فريش,Fresh Ginger,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+292,زياده وزن,Weight Gain Blend,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+293,دقيق اصفر,Yellow Flour,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+294,دقيق اسود,Black Flour,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+295,حنه فرد,Hair Straightening Henna,العناية والجمال,Beauty & Personal Care,,,,,,FALSE,,,,,,,,0,FALSE
+296,شكولاته خام,Baking Chocolate,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+297,مشمشيه,Dried Apricots,مكسرات,Nuts,,,,,assets/297.webp,TRUE,,120,200,400,800,,,0,FALSE
+298,كريز احمر,Red Cherries,مكسرات,Nuts,,,,,,FALSE,,,,,,,,0,FALSE
+299,كريز اخضر,Green Cherries,مكسرات,Nuts,,,,,,FALSE,,,,,,,,0,FALSE
+300,لبن سكيمد,Skimmed Milk Powder,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+301,خروب,Carob,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+302,نواه مشمش,Apricot Kernels,مكسرات,Nuts,,,,,,FALSE,,,,,,,,0,FALSE
+303,عصفر,Safflower,بهارات,Spices,,,,,assets/303.webp,TRUE,,300,500,1000,2000,,,0,FALSE
+304,زعفران صحيح,Whole Saffron,بهارات,Spices,تبداء من 10 جرام,Starts from 10gm,,,assets/304.webp,TRUE,,4000,7500,15000,30000,,300,0,FALSE
+305,دقيق اسمر,Whole Wheat Flour,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+306,عشبه القديسه,St. John's Wort,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+307,استيفيا,Stevia,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+308,فول صويا صحيح,Whole Soybeans,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+309,صدف بحري,Sea Shells,العناية والجمال,Beauty & Personal Care,,,,,,FALSE,,,,,,,,0,FALSE
+310,كف مريم,Kaff Maryam,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+311,صويا مجروش,Crushed Soybeans,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+312,بلكم,Balkam,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+313,فلاريس,Phalaris,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+314,ورق صفصاف,Willow Leaves,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+315,حب ملوك,Croton Seeds,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+316,جوزهند ظفر,Coconut Zafar,مكسرات,Nuts,,,,,,FALSE,,,,,,,,0,FALSE
+317,برز جزر,Carrot Seeds,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+318,بخور قمع جامبو اربيكا مسك,Jumbo cone incense Arabica musk,بخور,Incense,,,,,assets/318.webp,TRUE,,,,,,,100,0,FALSE
+319,بخور قمع جامبو عود خيال,Jumbo cone incense Oudh khayal,بخور,Incense,,,,,assets/319.webp,TRUE,,,,,,,100,0,FALSE
+320,بخور قمع جامبو لمسه العود,Jumbo cone incense oudh touch me,بخور,Incense,,,,,assets/320.webp,TRUE,,,,,,,100,0,FALSE
+321,حبوب لقاح,Bee Pollen,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+322,عرعر,Juniper Berries,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+323,سم نحل,Bee Venom,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+324,نشادر,Ammonium Chloride,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+325,دقيق اسمر,Whole Wheat Flour,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+326,رجل اسد,Lady's Mantle,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+327,قرطاس اللوز,Almond Shells,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+328,شمع برافين,Paraffin Wax,العناية والجمال,Beauty & Personal Care,,,,,,FALSE,,,,,,,,0,FALSE
+329,عسل بالشمع العصيمي,Honey with comb,عسل,Honey,,,,,assets/329.webp,TRUE,,,,180,,,,0,FALSE
+330,عفص,Oak Galls,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+331,عسل بالمكسرات العصيمي,Mixed nuts honey,عسل,Honey,,,,,assets/331.webp,TRUE,,,,300,,,,0,FALSE
+332,فانليا,Vanilla,بهارات,Spices,تبداء من 10 جرام,Starts from 10gm,,,assets/332.webp,TRUE,,400,750,1500,3000,,30,0,FALSE
+333,عسل سدر جبلي العصيمي,Mountain Sidr honey,عسل,Honey,,,,,assets/333.webp,TRUE,,,,600,,,,20,FALSE
+334,سحلب,Sahlab,بهارات,Spices,,,,,,FALSE,,,,,,,,0,FALSE
+335,عسل موالح العصيمي,Citrus honey,عسل,Honey,,,,,assets/335.webp,TRUE,,,100,200,,,,0,FALSE
+336,فسدق,Pistachios,مكسرات,Nuts,,,,,assets/336.webp,TRUE,,140,240,480,960,,,0,FALSE
+337,عسل العصيمي,Honey,عسل,Honey,,,,,assets/337.webp,TRUE,,,75,150,,,,0,FALSE
+338,عسل حبه بركه العصيمي,Black seed honey,عسل,Honey,,,,,assets/338.webp,TRUE,,,80,160,,,,0,FALSE
+339,لب قرع,Pumpkin seeds,مكسرات,Nuts,,,,,assets/339.webp,TRUE,,100,150,300,600,,,0,FALSE

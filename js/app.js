@@ -1,3 +1,11 @@
+const DEPLOYMENT_VERSION = String(globalThis.AT_SPICES_DEPLOYMENT_VERSION || "dev");
+
+function versionedAsset(path) {
+  const url = new URL(path, document.baseURI);
+  url.searchParams.set("v", DEPLOYMENT_VERSION);
+  return url.href;
+}
+
 /* Shared header and footer components */
 class SiteHeader extends HTMLElement {
   connectedCallback() {
@@ -5,7 +13,7 @@ class SiteHeader extends HTMLElement {
       <header class="site-header">
         <div class="header-inner header-shell">
           <a class="brand" href="#shopView" aria-label="A.T. Spices">
-            <img src="assets/ATlogo-round-ar-630.png" alt="" width="70" height="70">
+            <img src="${versionedAsset("assets/ATlogo-round-ar-630.png")}" alt="" width="70" height="70">
             <span class="brand-copy">
               <strong>A.T. Spices</strong>
               <small data-i18n="brandLine">نكهة تستحق المشاركة</small>
@@ -78,7 +86,7 @@ class SiteFooter extends HTMLElement {
         <div class="shared-footer-inner footer-shell">
           <div class="footer-identity">
             <a class="shared-footer-brand" href="#shopView" aria-label="A.T. Spices">
-              <img src="assets/ATlogo-round-ar-630.png" alt="" width="52" height="52" loading="lazy">
+              <img src="${versionedAsset("assets/ATlogo-round-ar-630.png")}" alt="" width="52" height="52" loading="lazy">
               <span>
                 <strong>A.T. Spices</strong>
                 <small data-i18n="footerLine">بهارات، مكسرات، عسل، بخور وعناية شخصية</small>
@@ -119,8 +127,7 @@ const CART_KEY = "at-spices-cart";
 const DEFAULT_PRODUCT_IMAGE = "assets/ATlogo-round-ar-630.png";
 
 const PRODUCTS_URL = "data/products.csv";
-const PRODUCTS_CACHE_KEY = "at-spices-products-v3";
-const PRODUCTS_CACHE_VERSION = 3;
+const PRODUCTS_CACHE_KEY = "at-spices-products";
 
 let products = [];
 let categoryDefinitions = [];
@@ -196,6 +203,9 @@ const translations = {
     offers: "العروض",
     from: "يبدأ من",
     add: "أضف",
+    preparation: "شكل المنتج",
+    whole: "صحيح",
+    ground: "ناعم",
     viewDetails: "التفاصيل",
     hideDetails: "إخفاء التفاصيل",
     remove: "حذف",
@@ -283,6 +293,9 @@ const translations = {
     offers: "Offers",
     from: "From",
     add: "Add",
+    preparation: "Product form",
+    whole: "Whole",
+    ground: "Powder",
     viewDetails: "Details",
     hideDetails: "Hide details",
     remove: "Remove",
@@ -308,11 +321,12 @@ const translations = {
 const categoryIcons = {
   all: "✦",
   offers: "%",
-  "بهارات": "✺",
-  "مكسرات": "◉",
-  "عسل": "◆",
-  "بخور": "♨",
-  "العناية والجمال": "♡"
+  "بهارات": "✺",                 // spices
+  "مكسرات": "◉",                 // nuts
+  "عسل": "◆",                    // honey
+  "بخور": "♨",                   // incense
+  "اعشاب وزيوت طبيعية": "❧",    // organic herbs & oils
+  "العناية والجمال": "♡"         // beauty & personal care
 };
 
 const categoryTones = {
@@ -320,6 +334,7 @@ const categoryTones = {
   "مكسرات": "#dfc9a5",
   "عسل": "#edcf83",
   "بخور": "#d8c5c0",
+  "اعشاب وزيوت طبيعية": "#cdd9b8",
   "العناية والجمال": "#e8cfd1"
 };
 
@@ -495,7 +510,8 @@ function normalizeProducts(rows) {
       price_1000: parseNumber(row.price_1000),
       price_shaker: parseNumber(row.price_shaker),
       price_unit: parseNumber(row.price_unit),
-      discount: Math.max(0, parseNumber(row.discount) || 0)
+      discount: Math.max(0, parseNumber(row.discount) || 0),
+      isPowder: parseBoolean(row.isPowder ?? row.is_powder)
     };
   }).filter(Boolean);
 }
@@ -516,7 +532,10 @@ function setProducts(nextProducts) {
 function readProductsCache() {
   try {
     const cached = JSON.parse(localStorage.getItem(PRODUCTS_CACHE_KEY));
-    if (cached?.version !== PRODUCTS_CACHE_VERSION || !Array.isArray(cached.products)) return null;
+    if (cached?.version !== DEPLOYMENT_VERSION || !Array.isArray(cached.products)) {
+      localStorage.removeItem(PRODUCTS_CACHE_KEY);
+      return null;
+    }
     return cached.products;
   } catch {
     return null;
@@ -526,7 +545,7 @@ function readProductsCache() {
 function saveProductsCache(nextProducts) {
   try {
     localStorage.setItem(PRODUCTS_CACHE_KEY, JSON.stringify({
-      version: PRODUCTS_CACHE_VERSION,
+      version: DEPLOYMENT_VERSION,
       savedAt: Date.now(),
       products: nextProducts
     }));
@@ -691,9 +710,9 @@ function createProductImage(product, { lazy = true } = {}) {
     if (image.dataset.fallbackApplied === "true") return;
     image.dataset.fallbackApplied = "true";
     image.classList.add("product-image-fallback");
-    image.src = DEFAULT_PRODUCT_IMAGE;
+    image.src = versionedAsset(DEFAULT_PRODUCT_IMAGE);
   });
-  image.src = source;
+  image.src = versionedAsset(source);
   return image;
 }
 
@@ -799,13 +818,34 @@ function createProductCard(product) {
     price.textContent = formatPrice(selected.price);
   });
 
+  let preparationOptions = null;
+  if (product.isPowder) {
+    preparationOptions = document.createElement("fieldset");
+    preparationOptions.className = "preparation-options";
+    preparationOptions.innerHTML = `
+      <legend class="visually-hidden">${t("preparation")}</legend>
+      <label>
+        <input type="radio" name="preparation-${product.id}" value="whole" checked>
+        <span>${t("whole")}</span>
+      </label>
+      <label>
+        <input type="radio" name="preparation-${product.id}" value="ground">
+        <span>${t("ground")}</span>
+      </label>`;
+  }
+
   const addButton = document.createElement("button");
   addButton.type = "button";
   addButton.className = "add-button";
   addButton.innerHTML = `<i class="bi bi-plus-lg" aria-hidden="true"></i><span>${t("add")}</span>`;
-  addButton.addEventListener("click", () => addToCart(product.id, select.value));
+  addButton.addEventListener("click", () => {
+    const preparationKey = preparationOptions?.querySelector("input:checked")?.value || null;
+    addToCart(product.id, select.value, preparationKey);
+  });
   controls.append(select, addButton);
-  content.append(meta, title, descriptionToggle, description, priceRow, controls);
+  content.append(meta, title, descriptionToggle, description, priceRow);
+  if (preparationOptions) content.append(preparationOptions);
+  content.append(controls);
   article.append(media, content);
   return article;
 }
@@ -950,17 +990,18 @@ function resetFilters() {
   renderProducts();
 }
 
-function addToCart(productId, sizeKey) {
+function addToCart(productId, sizeKey, preparationKey = null) {
   const product = products.find(item => item.id === productId);
   const option = productOptions(product).find(item => item.key === sizeKey);
   if (!product || !option) return;
 
-  const lineId = `${productId}::${sizeKey}`;
+  const selectedPreparation = product.isPowder && preparationKey === "ground" ? "ground" : product.isPowder ? "whole" : null;
+  const lineId = `${productId}::${sizeKey}::${selectedPreparation || "standard"}`;
   const existing = state.cart.find(item => item.lineId === lineId);
   if (existing) {
     existing.quantity += 1;
   } else {
-    state.cart.push({ lineId, productId, sizeKey, quantity: 1 });
+    state.cart.push({ lineId, productId, sizeKey, preparationKey: selectedPreparation, quantity: 1 });
   }
   saveCart();
   renderCart();
@@ -972,14 +1013,16 @@ function cartLineDetails(item) {
   if (!product) return null;
   const option = productOptions(product).find(candidate => candidate.key === item.sizeKey);
   if (!option) return null;
-  return { ...item, product, option, lineTotal: option.price * item.quantity };
+  const preparationKey = product.isPowder && item.preparationKey === "ground" ? "ground" : product.isPowder ? "whole" : null;
+  const lineId = `${item.productId}::${item.sizeKey}::${preparationKey || "standard"}`;
+  return { ...item, lineId, preparationKey, product, option, lineTotal: option.price * item.quantity };
 }
 
 function cleanCart() {
   state.cart = state.cart
     .map(cartLineDetails)
     .filter(Boolean)
-    .map(({ lineId, productId, sizeKey, quantity }) => ({ lineId, productId, sizeKey, quantity }));
+    .map(({ lineId, productId, sizeKey, preparationKey, quantity }) => ({ lineId, productId, sizeKey, preparationKey, quantity }));
   saveCart();
 }
 
@@ -997,7 +1040,8 @@ function createCartItem(item) {
   const title = document.createElement("h3");
   title.textContent = localized(details.product, "name");
   const variant = document.createElement("p");
-  variant.textContent = `${details.option.label} - ${formatPrice(details.option.price)}`;
+  const preparationLabel = details.preparationKey ? ` - ${t(details.preparationKey)}` : "";
+  variant.textContent = `${details.option.label}${preparationLabel} - ${formatPrice(details.option.price)}`;
 
   const quantity = document.createElement("div");
   quantity.className = "quantity-control";
@@ -1115,15 +1159,13 @@ function submitOrder() {
   const total = details.reduce((sum, item) => sum + item.lineTotal, 0);
   const lines = details.map((item, index) => {
     const name = localized(item.product, "name");
-    return `${index + 1}. ${name} — ${item.option.label} × ${item.quantity} — ${formatPrice(item.lineTotal)}`;
+    const preparation = item.preparationKey ? ` — ${t(item.preparationKey)}` : "";
+    return `${index + 1}. ${name} — ${item.option.label}${preparation} — ×${item.quantity} — ${formatPrice(item.lineTotal)}`;
   });
   const message = [
     t("orderIntro"),
-    "",
     ...lines,
-    "",
     `${t("orderTotal")}: ${formatPrice(total)}`,
-    "",
     t("orderOutro")
   ].join("\n");
   window.open(`https://wa.me/${PHONE}?text=${encodeURIComponent(message)}`, "_blank", "noopener,noreferrer");
@@ -1139,6 +1181,7 @@ async function initializeCatalog() {
     try {
       setProducts(cached);
       applyLanguage(state.lang);
+      return;
     } catch {
       localStorage.removeItem(PRODUCTS_CACHE_KEY);
     }
@@ -1162,9 +1205,21 @@ async function initializeCatalog() {
 function registerServiceWorker() {
   if (!("serviceWorker" in navigator) || window.location.protocol === "file:") return;
   window.addEventListener("load", () => {
-    navigator.serviceWorker.register("./service-worker.js").catch(error => {
-      console.warn("Offline cache registration was skipped.", error);
-    });
+    const hadController = Boolean(navigator.serviceWorker.controller);
+    let refreshing = false;
+    if (hadController) {
+      navigator.serviceWorker.addEventListener("controllerchange", () => {
+        if (refreshing) return;
+        refreshing = true;
+        window.location.reload();
+      });
+    }
+
+    navigator.serviceWorker.register("./service-worker.js", { updateViaCache: "none" })
+      .then(registration => registration.update())
+      .catch(error => {
+        console.warn("Offline cache registration was skipped.", error);
+      });
   });
 }
 
@@ -1227,8 +1282,13 @@ document.addEventListener("keydown", event => {
 window.addEventListener("resize", updateFilterArrow);
 
 registerServiceWorker();
-localStorage.removeItem("at-spices-products-v1");
-localStorage.removeItem("at-spices-products-v2");
+for (let index = localStorage.length - 1; index >= 0; index -= 1) {
+  const key = localStorage.key(index);
+  if (key?.startsWith("at-spices-products-v")) localStorage.removeItem(key);
+}
+document.querySelectorAll('img[src^="assets/"]').forEach(image => {
+  image.src = versionedAsset(image.getAttribute("src"));
+});
 if (window.location.hash === "#contact") history.replaceState(null, "", "#shopView");
 applyLanguage(state.lang);
 initializeCatalog();
