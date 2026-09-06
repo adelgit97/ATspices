@@ -10,6 +10,8 @@ const PRECACHE_URLS = [
   "./css/fonts.css",
   "./js/deployment-version.js",
   "./js/app.js",
+  "./js/entry-page.js",
+  "./js/product-page.js",
   "./data/products.csv",
   "./assets/ATlogo-round-ar-630.png",
   "./assets/fonts/cairo/Cairo-Arabic.woff2"

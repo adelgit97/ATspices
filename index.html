@@ -2,6 +2,7 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
+  <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#69462f">
   <meta name="description" content="A.T. Spices – متجر بهارات، أعشاب، مكسرات، عسل ومنتجات عناية في مدينة نصر والتجمع. High-quality spices, herbs, nuts, honey and personal care products in Cairo.">
@@ -176,6 +177,20 @@
         </a>
       </div>
     </div>
+  </aside>
+
+  <div class="drawer-overlay" id="productOverlay" hidden></div>
+  <aside class="product-drawer" id="productDrawer" role="dialog" aria-modal="true" aria-labelledby="productDrawerTitle" aria-hidden="true">
+    <div class="drawer-header">
+      <div>
+        <span class="section-kicker" data-i18n="productDetails">تفاصيل المنتج</span>
+        <h2 id="productDrawerTitle"></h2>
+      </div>
+      <button class="close-button" id="productClose" type="button" data-i18n-aria-label="closeProduct" aria-label="إغلاق تفاصيل المنتج">
+        <i class="bi bi-x-lg" aria-hidden="true"></i>
+      </button>
+    </div>
+    <div class="product-drawer-content" id="productDrawerContent"></div>
   </aside>
 
   <div class="drawer-overlay" id="drawerOverlay" hidden></div>

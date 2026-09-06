@@ -122,6 +122,7 @@ customElements.define("site-footer", SiteFooter);
 /* SPA routing, translations, catalog, cart, and caching */
 const PHONE = "201036578338";
 const EMAIL = "at.spicesstore@gmail.com";
+const SITE_URL = "https://atspicesstore.com";
 const LANGUAGE_KEY = "lang";
 const CART_KEY = "at-spices-cart";
 const DEFAULT_PRODUCT_IMAGE = "assets/ATlogo-round-ar-630.png";
@@ -208,6 +209,8 @@ const translations = {
     ground: "ناعم",
     viewDetails: "التفاصيل",
     hideDetails: "إخفاء التفاصيل",
+    productDetails: "تفاصيل المنتج",
+    closeProduct: "إغلاق تفاصيل المنتج",
     remove: "حذف",
     decrease: "تقليل الكمية",
     increase: "زيادة الكمية",
@@ -298,6 +301,8 @@ const translations = {
     ground: "Powder",
     viewDetails: "Details",
     hideDetails: "Hide details",
+    productDetails: "Product details",
+    closeProduct: "Close product details",
     remove: "Remove",
     decrease: "Decrease quantity",
     increase: "Increase quantity",
@@ -349,7 +354,7 @@ const sizeColumns = [
 
 const state = {
   lang: resolveInitialLanguage(),
-  category: "all",
+  category: resolveInitialCategory(),
   search: "",
   sort: "featured",
   page: 1,
@@ -370,6 +375,11 @@ const elements = {
   contactClose: document.getElementById("contactClose"),
   contactOverlay: document.getElementById("contactOverlay"),
   contactDrawer: document.getElementById("contactDrawer"),
+  productClose: document.getElementById("productClose"),
+  productOverlay: document.getElementById("productOverlay"),
+  productDrawer: document.getElementById("productDrawer"),
+  productDrawerTitle: document.getElementById("productDrawerTitle"),
+  productDrawerContent: document.getElementById("productDrawerContent"),
   categoryFilters: document.getElementById("categoryFilters"),
   filterScroll: document.getElementById("filterScroll"),
   filterNext: document.getElementById("filterNext"),
@@ -403,11 +413,18 @@ const elements = {
 
 let lastFocusedElement = null;
 let toastTimer = null;
+let openProductId = null;
 
 function resolveInitialLanguage() {
+  const routeLanguage = window.location.pathname.match(/\/(ar|en)\/(?:product|category)\//)?.[1];
+  if (routeLanguage) return routeLanguage;
   const saved = localStorage.getItem(LANGUAGE_KEY);
   if (saved === "ar" || saved === "en") return saved;
   return navigator.language.toLowerCase().startsWith("ar") ? "ar" : "en";
+}
+
+function resolveInitialCategory() {
+  return new URLSearchParams(window.location.search).get("category") === "offers" ? "offers" : "all";
 }
 
 function readCart() {
@@ -569,7 +586,33 @@ function t(key, values = {}) {
 }
 
 function updateDocumentTitle() {
+  const product = products.find(item => item.id === openProductId);
+  const canonical = document.querySelector('link[rel="canonical"]');
+  const openGraphUrl = document.querySelector('meta[property="og:url"]');
+  if (product) {
+    document.title = `${localized(product, "name")} | A.T. Spices`;
+    const url = new URL(productUrl(product), SITE_URL).href;
+    if (canonical) canonical.href = url;
+    if (openGraphUrl) openGraphUrl.content = url;
+    return;
+  }
+
+  const categoryRoute = window.location.pathname.match(/\/(ar|en)\/category\/([^/]+)\/?$/);
+  const category = categoryRoute
+    ? categoryDefinitions.find(item => categorySlug(item) === decodeURIComponent(categoryRoute[2]))
+    : null;
+  if (category) {
+    const categoryName = state.lang === "en" ? category.label_eng : category.value;
+    document.title = `${categoryName} | A.T. Spices`;
+    const url = new URL(categoryUrl(category), SITE_URL).href;
+    if (canonical) canonical.href = url;
+    if (openGraphUrl) openGraphUrl.content = url;
+    return;
+  }
+
   document.title = state.lang === "ar" ? "A.T. Spices | المتجر" : "A.T. Spices | Shop";
+  if (canonical) canonical.href = `${SITE_URL}/`;
+  if (openGraphUrl) openGraphUrl.content = `${SITE_URL}/`;
 }
 
 function localized(product, field) {
@@ -591,6 +634,42 @@ function lowestPrice(product) {
 function formatPrice(value) {
   const locale = state.lang === "ar" ? "ar-EG" : "en-EG";
   return `${new Intl.NumberFormat(locale, { maximumFractionDigits: 2 }).format(value)} ${t("currency")}`;
+}
+
+function slugify(value) {
+  return String(value || "")
+    .normalize("NFKD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+}
+
+function productSlug(product) {
+  const namePart = slugify(product.name_eng || product.name) || "product";
+  const idPart = slugify(product.id) || "item";
+  return `${namePart}-${idPart}`;
+}
+
+function productUrl(product, lang = state.lang) {
+  return `/${lang}/product/${productSlug(product)}/`;
+}
+
+function categorySlug(category) {
+  return slugify(category.label_eng || category.category_eng || category.value || category.category) || "category";
+}
+
+function categoryUrl(category, lang = state.lang) {
+  return `/${lang}/category/${categorySlug(category)}/`;
+}
+
+function syncCategoryUrl(categoryValue) {
+  const category = categoryDefinitions.find(item => item.value === categoryValue);
+  const url = category
+    ? categoryUrl(category)
+    : categoryValue === "offers" ? "/?category=offers" : "/";
+  history.replaceState({ page: "catalog", category: categoryValue }, "", url);
+  updateDocumentTitle();
 }
 
 function applyLanguage(lang) {
@@ -621,6 +700,17 @@ function applyLanguage(lang) {
     renderFilters();
     renderProducts();
     renderCart();
+    if (openProductId) {
+      const product = products.find(item => item.id === openProductId);
+      if (product) {
+        renderProductDrawer(product);
+        history.replaceState(history.state, "", productUrl(product));
+      }
+    } else if (window.location.pathname.match(/\/(ar|en)\/category\//)) {
+      const category = categoryDefinitions.find(item => item.value === state.category);
+      if (category) history.replaceState(history.state, "", categoryUrl(category));
+    }
+    updateDocumentTitle();
   } else if (catalogStatus === "error") {
     renderCatalogError();
   } else {
@@ -642,8 +732,10 @@ function renderFilters() {
   ];
 
   elements.categoryFilters.replaceChildren(...filters.map(filter => {
-    const button = document.createElement("button");
-    button.type = "button";
+    const category = categories.find(item => item.value === filter.value);
+    const button = category ? document.createElement("a") : document.createElement("button");
+    if (category) button.href = categoryUrl(category);
+    else button.type = "button";
     button.className = `filter-button${filter.value === "offers" ? " offer-filter" : ""}${state.category === filter.value ? " active" : ""}`;
     button.dataset.category = filter.value;
     button.setAttribute("aria-pressed", String(state.category === filter.value));
@@ -737,6 +829,20 @@ function createProductCard(product) {
   const article = document.createElement("article");
   article.className = "product-card";
   article.dataset.productId = product.id;
+
+  const detailLink = document.createElement("a");
+  detailLink.className = "product-card-link";
+  detailLink.href = productUrl(product);
+  detailLink.setAttribute("aria-label", `${t("viewDetails")}: ${localized(product, "name")}`);
+  const detailLinkText = document.createElement("span");
+  detailLinkText.className = "visually-hidden";
+  detailLinkText.textContent = localized(product, "name");
+  detailLink.append(detailLinkText);
+  detailLink.addEventListener("click", event => {
+    if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+    event.preventDefault();
+    openProduct(product, { pushHistory: true });
+  });
 
   const media = document.createElement("div");
   media.className = "product-media";
@@ -843,10 +949,12 @@ function createProductCard(product) {
     addToCart(product.id, select.value, preparationKey);
   });
   controls.append(select, addButton);
-  content.append(meta, title, descriptionToggle, description, priceRow);
+  content.append(meta, title);
+  if (description.textContent) content.append(descriptionToggle, description);
+  content.append(priceRow);
   if (preparationOptions) content.append(preparationOptions);
   content.append(controls);
-  article.append(media, content);
+  article.append(detailLink, media, content);
   return article;
 }
 
@@ -988,6 +1096,7 @@ function resetFilters() {
   elements.productSearch.value = "";
   renderFilters();
   renderProducts();
+  syncCategoryUrl("all");
 }
 
 function addToCart(productId, sizeKey, preparationKey = null) {
@@ -1105,6 +1214,182 @@ function removeCartItem(lineId) {
   renderCart();
 }
 
+function renderProductDrawer(product) {
+  const options = productOptions(product);
+  elements.productDrawerTitle.textContent = localized(product, "name");
+
+  const detail = document.createElement("div");
+  detail.className = "product-detail";
+
+  const media = document.createElement("div");
+  media.className = "product-detail-media";
+  media.append(createProductImage(product, { lazy: false }));
+
+  const info = document.createElement("div");
+  info.className = "product-detail-info";
+
+  const category = document.createElement("span");
+  category.className = "product-meta";
+  category.textContent = localized(product, "category");
+
+  const title = document.createElement("h3");
+  title.textContent = localized(product, "name");
+
+  const badges = document.createElement("div");
+  badges.className = "product-detail-badges";
+  const tagText = localized(product, "tag");
+  if (tagText) {
+    const tag = document.createElement("span");
+    tag.className = "product-tag";
+    tag.textContent = tagText;
+    badges.append(tag);
+  }
+  if (Number(product.discount) > 0) {
+    const discount = document.createElement("span");
+    discount.className = "discount-badge";
+    discount.textContent = `${product.discount}% ${state.lang === "ar" ? "خصم" : "OFF"}`;
+    badges.append(discount);
+  }
+
+  const descriptionText = localized(product, "description");
+  const description = document.createElement("p");
+  description.className = "product-detail-description";
+  description.textContent = descriptionText;
+
+  const priceRow = document.createElement("div");
+  priceRow.className = "price-row product-detail-price";
+  const pricePrefix = document.createElement("span");
+  pricePrefix.className = "price-prefix";
+  pricePrefix.textContent = t("from");
+  const price = document.createElement("strong");
+  price.className = "product-price";
+  price.textContent = formatPrice(lowestPrice(product));
+  priceRow.append(pricePrefix, price);
+
+  const controls = document.createElement("div");
+  controls.className = "product-controls product-detail-controls";
+  const select = document.createElement("select");
+  select.className = "size-select";
+  select.setAttribute("aria-label", `${localized(product, "name")} - ${t("preparation")}`);
+  options.forEach(option => {
+    const optionElement = document.createElement("option");
+    optionElement.value = option.key;
+    optionElement.textContent = `${option.label} - ${formatPrice(option.price)}`;
+    select.append(optionElement);
+  });
+  select.addEventListener("change", () => {
+    const selected = options.find(option => option.key === select.value);
+    pricePrefix.hidden = true;
+    price.textContent = formatPrice(selected.price);
+  });
+
+  let preparationOptions = null;
+  if (product.isPowder) {
+    preparationOptions = document.createElement("fieldset");
+    preparationOptions.className = "preparation-options";
+    preparationOptions.innerHTML = `
+      <legend class="visually-hidden">${t("preparation")}</legend>
+      <label><input type="radio" name="drawer-preparation" value="whole" checked><span>${t("whole")}</span></label>
+      <label><input type="radio" name="drawer-preparation" value="ground"><span>${t("ground")}</span></label>`;
+  }
+
+  const addButton = document.createElement("button");
+  addButton.type = "button";
+  addButton.className = "add-button";
+  addButton.innerHTML = `<i class="bi bi-plus-lg" aria-hidden="true"></i><span>${t("add")}</span>`;
+  addButton.addEventListener("click", () => {
+    const preparationKey = preparationOptions?.querySelector("input:checked")?.value || null;
+    addToCart(product.id, select.value, preparationKey);
+  });
+  controls.append(select, addButton);
+
+  info.append(category, title, badges);
+  if (descriptionText) info.append(description);
+  info.append(priceRow);
+  if (preparationOptions) info.append(preparationOptions);
+  info.append(controls);
+  detail.append(media, info);
+  elements.productDrawerContent.replaceChildren(detail);
+}
+
+function openProduct(product, { pushHistory = false } = {}) {
+  if (!product) return;
+  openProductId = product.id;
+  renderProductDrawer(product);
+  updateDocumentTitle();
+  if (pushHistory) {
+    history.pushState({ productModal: true, productId: product.id }, "", productUrl(product));
+  }
+  if (!elements.productDrawer.classList.contains("open")) {
+    openDrawer(elements.productDrawer, elements.productOverlay, elements.productClose);
+  }
+}
+
+function closeProductDrawerUI() {
+  if (!elements.productDrawer.classList.contains("open")) return;
+  openProductId = null;
+  closeDrawer(elements.productDrawer, elements.productOverlay);
+  updateDocumentTitle();
+}
+
+function closeProduct() {
+  if (history.state?.productModal) {
+    history.back();
+    return;
+  }
+  closeProductDrawerUI();
+  history.replaceState({ page: "home" }, "", "/");
+}
+
+function syncProductRoute() {
+  if (!catalogReady) return;
+  const match = window.location.pathname.match(/\/(ar|en)\/product\/([^/]+)\/?$/);
+  if (!match) {
+    closeProductDrawerUI();
+    return;
+  }
+
+  const product = products.find(item => productSlug(item) === decodeURIComponent(match[2]));
+  if (!product) return;
+  if (state.lang !== match[1]) {
+    state.lang = match[1];
+    document.documentElement.lang = state.lang;
+    document.documentElement.dir = state.lang === "ar" ? "rtl" : "ltr";
+    localStorage.setItem(LANGUAGE_KEY, state.lang);
+  }
+  openProduct(product);
+}
+
+function syncCategoryRoute() {
+  if (!catalogReady) return;
+  const match = window.location.pathname.match(/\/(ar|en)\/category\/([^/]+)\/?$/);
+  if (!match) return;
+  const category = categoryDefinitions.find(item => categorySlug(item) === decodeURIComponent(match[2]));
+  if (!category) return;
+
+  state.lang = match[1];
+  state.category = category.value;
+  state.page = 1;
+  document.documentElement.lang = state.lang;
+  document.documentElement.dir = state.lang === "ar" ? "rtl" : "ltr";
+  localStorage.setItem(LANGUAGE_KEY, state.lang);
+  renderFilters();
+  renderProducts();
+  updateDocumentTitle();
+  document.getElementById("productsSection")?.scrollIntoView({ behavior: "auto", block: "start" });
+}
+
+function syncRoute() {
+  syncProductRoute();
+  syncCategoryRoute();
+}
+
+function signalRouteReady() {
+  requestAnimationFrame(() => requestAnimationFrame(() => {
+    window.dispatchEvent(new CustomEvent("atspices:route-ready"));
+  }));
+}
+
 function openDrawer(drawer, overlay, closeButton) {
   lastFocusedElement = document.activeElement;
   overlay.hidden = false;
@@ -1121,7 +1406,7 @@ function closeDrawer(drawer, overlay) {
   overlay.classList.remove("visible");
   drawer.classList.remove("open");
   drawer.setAttribute("aria-hidden", "true");
-  if (!elements.cartDrawer.classList.contains("open") && !elements.contactDrawer.classList.contains("open")) {
+  if (!elements.cartDrawer.classList.contains("open") && !elements.contactDrawer.classList.contains("open") && !elements.productDrawer.classList.contains("open")) {
     document.body.classList.remove("drawer-open");
   }
   window.setTimeout(() => {
@@ -1181,6 +1466,8 @@ async function initializeCatalog() {
     try {
       setProducts(cached);
       applyLanguage(state.lang);
+      syncRoute();
+      signalRouteReady();
       return;
     } catch {
       localStorage.removeItem(PRODUCTS_CACHE_KEY);
@@ -1192,6 +1479,8 @@ async function initializeCatalog() {
     setProducts(freshProducts);
     saveProductsCache(products);
     applyLanguage(state.lang);
+    syncRoute();
+    signalRouteReady();
   } catch (error) {
     console.error("Could not load the product catalog.", error);
     if (!catalogReady) {
@@ -1232,10 +1521,13 @@ elements.filterNext.addEventListener("click", scrollCategoryFilters);
 elements.categoryFilters.addEventListener("click", event => {
   const button = event.target.closest("[data-category]");
   if (!button) return;
+  if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+  event.preventDefault();
   state.category = button.dataset.category;
   state.page = 1;
   renderFilters();
   renderProducts();
+  syncCategoryUrl(state.category);
 });
 elements.productSearch.addEventListener("input", event => {
   state.search = event.target.value;
@@ -1269,6 +1561,8 @@ elements.resetFilters.addEventListener("click", resetFilters);
 elements.contactOpen.addEventListener("click", openContact);
 elements.contactClose.addEventListener("click", closeContact);
 elements.contactOverlay.addEventListener("click", closeContact);
+elements.productClose.addEventListener("click", closeProduct);
+elements.productOverlay.addEventListener("click", closeProduct);
 elements.cartOpen.addEventListener("click", openCart);
 elements.cartClose.addEventListener("click", closeCart);
 elements.drawerOverlay.addEventListener("click", closeCart);
@@ -1276,10 +1570,12 @@ elements.continueShopping.addEventListener("click", closeCart);
 elements.placeOrderButton.addEventListener("click", submitOrder);
 document.addEventListener("keydown", event => {
   if (event.key === "Escape") closeProductDescriptions();
+  if (event.key === "Escape" && elements.productDrawer.classList.contains("open")) closeProduct();
   if (event.key === "Escape" && elements.cartDrawer.classList.contains("open")) closeCart();
   if (event.key === "Escape" && elements.contactDrawer.classList.contains("open")) closeContact();
 });
 window.addEventListener("resize", updateFilterArrow);
+window.addEventListener("popstate", syncRoute);
 
 registerServiceWorker();
 for (let index = localStorage.length - 1; index >= 0; index -= 1) {
@@ -1290,5 +1586,8 @@ document.querySelectorAll('img[src^="assets/"]').forEach(image => {
   image.src = versionedAsset(image.getAttribute("src"));
 });
 if (window.location.hash === "#contact") history.replaceState(null, "", "#shopView");
+if (!window.location.pathname.match(/\/(ar|en)\/(?:product|category)\//) && !history.state) {
+  history.replaceState({ page: "home" }, "", window.location.href);
+}
 applyLanguage(state.lang);
 initializeCatalog();
