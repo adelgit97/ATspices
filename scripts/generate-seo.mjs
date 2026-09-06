@@ -7,6 +7,7 @@ const CSV_PATH = path.join(ROOT, "data", "products.csv");
 const SITE_URL = "https://atspicesstore.com";
 const BRAND = "A.T. Spices";
 const CURRENCY = "EGP";
+const GOOGLE_TAG_ID = "G-WH27RVYZHK";
 const GENERATED_ROOTS = [
   path.join(ROOT, "ar", "product"),
   path.join(ROOT, "en", "product"),
@@ -137,6 +138,14 @@ function sharedHead({ lang, title, description, canonical, image, type = "websit
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#69462f">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=${GOOGLE_TAG_ID}"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', '${GOOGLE_TAG_ID}');
+  </script>
   <title>${escapeHtml(title)}</title>
   <meta name="description" content="${escapeHtml(description)}">
   <meta name="robots" content="index, follow, max-image-preview:large">
