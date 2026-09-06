@@ -59,6 +59,7 @@ class SiteHeader extends HTMLElement {
     if (navigator.share) {
       try {
         await navigator.share(shareData);
+        trackEvent("share", analyticsShareFields("web_share"));
       } catch (error) {
         if (error.name !== "AbortError") this.copyShareUrl(isArabic);
       }
@@ -70,8 +71,10 @@ class SiteHeader extends HTMLElement {
   async copyShareUrl(isArabic) {
     try {
       await navigator.clipboard.writeText(window.location.href);
+      trackEvent("share", analyticsShareFields("copy_link"));
       window.alert(isArabic ? "تم نسخ الرابط" : "Link copied");
     } catch {
+      trackEvent("share", analyticsShareFields("copy_prompt"));
       window.prompt(isArabic ? "انسخ الرابط:" : "Copy this link:", window.location.href);
     }
   }
@@ -413,6 +416,7 @@ const elements = {
 
 let lastFocusedElement = null;
 let toastTimer = null;
+let searchAnalyticsTimer = null;
 let openProductId = null;
 
 function resolveInitialLanguage() {
@@ -636,6 +640,61 @@ function formatPrice(value) {
   return `${new Intl.NumberFormat(locale, { maximumFractionDigits: 2 }).format(value)} ${t("currency")}`;
 }
 
+function trackEvent(name, parameters = {}) {
+  if (typeof globalThis.gtag !== "function") return;
+  globalThis.gtag("event", name, parameters);
+}
+
+function analyticsItem(product, { option = null, preparationKey = null, quantity = 1, index = undefined } = {}) {
+  const item = {
+    item_id: product.id,
+    item_name: localized(product, "name"),
+    item_category: localized(product, "category"),
+    price: option?.price ?? lowestPrice(product),
+    quantity
+  };
+  const variant = [option?.label, preparationKey ? t(preparationKey) : ""].filter(Boolean).join(" - ");
+  if (variant) item.item_variant = variant;
+  if (index !== undefined) item.index = index;
+  return item;
+}
+
+function analyticsShareFields(method) {
+  const fields = {
+    method,
+    content_type: openProductId ? "product" : "website"
+  };
+  if (openProductId) fields.item_id = openProductId;
+  return fields;
+}
+
+function contactMethodForLink(link) {
+  const href = link.getAttribute("href") || "";
+  if (href.includes("maps.app.goo.gl")) return "location";
+  if (href.includes("wa.me")) return "whatsapp";
+  if (href.includes("instagram.com")) return "instagram";
+  if (href.includes("facebook.com")) return "facebook";
+  if (href.startsWith("mailto:")) return "email";
+  return null;
+}
+
+function trackVisibleItemList() {
+  if (!catalogReady) return;
+  const visible = filteredProducts();
+  const startIndex = (state.page - 1) * state.pageSize;
+  const pageProducts = visible.slice(startIndex, startIndex + state.pageSize);
+  const category = categoryDefinitions.find(item => item.value === state.category);
+  const listId = category ? categorySlug(category) : state.category;
+  const listName = category
+    ? (state.lang === "en" ? category.label_eng : category.value)
+    : t(state.category === "offers" ? "offers" : "all");
+  trackEvent("view_item_list", {
+    item_list_id: listId,
+    item_list_name: listName,
+    items: pageProducts.map((product, index) => analyticsItem(product, { index: startIndex + index }))
+  });
+}
+
 function slugify(value) {
   return String(value || "")
     .normalize("NFKD")
@@ -841,6 +900,12 @@ function createProductCard(product) {
   detailLink.addEventListener("click", event => {
     if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
     event.preventDefault();
+    const selectedOption = options.find(option => option.key === select.value) || options[0];
+    trackEvent("select_item", {
+      item_list_id: state.category,
+      item_list_name: localized(product, "category"),
+      items: [analyticsItem(product, { option: selectedOption })]
+    });
     openProduct(product, { pushHistory: true });
   });
 
@@ -1114,6 +1179,11 @@ function addToCart(productId, sizeKey, preparationKey = null) {
   }
   saveCart();
   renderCart();
+  trackEvent("add_to_cart", {
+    currency: "EGP",
+    value: option.price,
+    items: [analyticsItem(product, { option, preparationKey: selectedPreparation })]
+  });
   showToast(t("addedToCart", { name: localized(product, "name") }));
 }
 
@@ -1209,6 +1279,18 @@ function changeQuantity(lineId, amount) {
 }
 
 function removeCartItem(lineId) {
+  const details = cartLineDetails(state.cart.find(item => item.lineId === lineId));
+  if (details) {
+    trackEvent("remove_from_cart", {
+      currency: "EGP",
+      value: details.lineTotal,
+      items: [analyticsItem(details.product, {
+        option: details.option,
+        preparationKey: details.preparationKey,
+        quantity: details.quantity
+      })]
+    });
+  }
   state.cart = state.cart.filter(item => item.lineId !== lineId);
   saveCart();
   renderCart();
@@ -1314,6 +1396,7 @@ function renderProductDrawer(product) {
 
 function openProduct(product, { pushHistory = false } = {}) {
   if (!product) return;
+  const isNewView = openProductId !== product.id || !elements.productDrawer.classList.contains("open");
   openProductId = product.id;
   renderProductDrawer(product);
   updateDocumentTitle();
@@ -1322,6 +1405,13 @@ function openProduct(product, { pushHistory = false } = {}) {
   }
   if (!elements.productDrawer.classList.contains("open")) {
     openDrawer(elements.productDrawer, elements.productOverlay, elements.productClose);
+  }
+  if (isNewView) {
+    trackEvent("view_item", {
+      currency: "EGP",
+      value: lowestPrice(product),
+      items: [analyticsItem(product)]
+    });
   }
 }
 
@@ -1386,6 +1476,7 @@ function syncRoute() {
 
 function signalRouteReady() {
   requestAnimationFrame(() => requestAnimationFrame(() => {
+    if (!openProductId) trackVisibleItemList();
     window.dispatchEvent(new CustomEvent("atspices:route-ready"));
   }));
 }
@@ -1416,6 +1507,16 @@ function closeDrawer(drawer, overlay) {
 }
 
 function openCart() {
+  const details = state.cart.map(cartLineDetails).filter(Boolean);
+  trackEvent("view_cart", {
+    currency: "EGP",
+    value: details.reduce((sum, item) => sum + item.lineTotal, 0),
+    items: details.map(item => analyticsItem(item.product, {
+      option: item.option,
+      preparationKey: item.preparationKey,
+      quantity: item.quantity
+    }))
+  });
   openDrawer(elements.cartDrawer, elements.drawerOverlay, elements.cartClose);
 }
 
@@ -1424,6 +1525,7 @@ function closeCart() {
 }
 
 function openContact() {
+  trackEvent("contact", { contact_type: "contact_drawer" });
   openDrawer(elements.contactDrawer, elements.contactOverlay, elements.contactClose);
 }
 
@@ -1442,6 +1544,15 @@ function submitOrder() {
   const details = state.cart.map(cartLineDetails).filter(Boolean);
   if (!details.length) return;
   const total = details.reduce((sum, item) => sum + item.lineTotal, 0);
+  trackEvent("begin_checkout", {
+    currency: "EGP",
+    value: total,
+    items: details.map(item => analyticsItem(item.product, {
+      option: item.option,
+      preparationKey: item.preparationKey,
+      quantity: item.quantity
+    }))
+  });
   const lines = details.map((item, index) => {
     const name = localized(item.product, "name");
     const preparation = item.preparationKey ? ` — ${t(item.preparationKey)}` : "";
@@ -1528,11 +1639,24 @@ elements.categoryFilters.addEventListener("click", event => {
   renderFilters();
   renderProducts();
   syncCategoryUrl(state.category);
+  trackEvent("select_content", {
+    content_type: "category",
+    item_id: state.category
+  });
+  trackVisibleItemList();
 });
 elements.productSearch.addEventListener("input", event => {
   state.search = event.target.value;
   state.page = 1;
   renderProducts();
+  window.clearTimeout(searchAnalyticsTimer);
+  const searchTerm = state.search.trim();
+  if (searchTerm.length >= 2) {
+    searchAnalyticsTimer = window.setTimeout(() => {
+      trackEvent("search", { search_term: searchTerm });
+      trackVisibleItemList();
+    }, 700);
+  }
 });
 elements.productSort.addEventListener("change", event => {
   state.sort = event.target.value;
@@ -1568,6 +1692,12 @@ elements.cartClose.addEventListener("click", closeCart);
 elements.drawerOverlay.addEventListener("click", closeCart);
 elements.continueShopping.addEventListener("click", closeCart);
 elements.placeOrderButton.addEventListener("click", submitOrder);
+document.addEventListener("click", event => {
+  const link = event.target.closest("a[href]");
+  if (!link) return;
+  const method = contactMethodForLink(link);
+  if (method) trackEvent("generate_lead", { lead_source: method });
+});
 document.addEventListener("keydown", event => {
   if (event.key === "Escape") closeProductDescriptions();
   if (event.key === "Escape" && elements.productDrawer.classList.contains("open")) closeProduct();

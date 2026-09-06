@@ -195,6 +195,7 @@ function productPage(product, lang, version) {
   const productData = {
     id: product.id,
     name: values.name,
+    category: values.category,
     isPowder: isTrue(product.is_powder),
     options: values.options
   };

@@ -20,11 +20,27 @@
       ? document.querySelector('input[name="preparation"]:checked')?.value || "whole"
       : null;
     const sizeKey = sizeSelect.value;
+    const selectedOption = product.options.find(option => option.key === sizeKey);
     const lineId = `${product.id}::${sizeKey}::${preparationKey || "standard"}`;
     const existing = cart.find(item => item.lineId === lineId);
     if (existing) existing.quantity += 1;
     else cart.push({ lineId, productId: product.id, sizeKey, preparationKey, quantity: 1 });
     localStorage.setItem(CART_KEY, JSON.stringify(cart));
+    if (typeof globalThis.gtag === "function" && selectedOption) {
+      const item = {
+        item_id: product.id,
+        item_name: product.name,
+        item_category: product.category,
+        item_variant: [selectedOption.label, preparationKey].filter(Boolean).join(" - "),
+        price: selectedOption.price,
+        quantity: 1
+      };
+      globalThis.gtag("event", "add_to_cart", {
+        currency: "EGP",
+        value: selectedOption.price,
+        items: [item]
+      });
+    }
     status.textContent = document.documentElement.lang === "ar"
       ? `تمت إضافة ${product.name} إلى السلة`
       : `${product.name} added to your cart`;
